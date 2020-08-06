@@ -1,6 +1,6 @@
 # Middle Earth Remastered Repo
 
-* Check the Wiki for guides and tips!
+* Check the [Wiki](https://github.com/usmcgeek/meccg/wiki/MECCG-Set-Editor:-Getting-Started) for guides and tips!
 
 ## Notes:
  * Note - while this is compatible with normal magicseteditor, you will not get full resolution with the normal one.
