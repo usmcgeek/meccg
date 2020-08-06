@@ -3,13 +3,13 @@
 * Check the Wiki for guides and tips!
 
 ## Notes:
- * SetEditor in \resources\meccgseteditor_windows
  * Note - while this is compatible with normal magicseteditor, you will not get full resolution with the normal one.
    Use the editor here for full resolution support. Regular magicseteditor forces everything down to 150dpi max.
  * Simply run the application from the directory.  Or move it all and run.
- *All game and style files are in the \data\ subdirectory
+ * All game and style files are in the \data\ subdirectory
  * Make sure to install fonts
  * The game files for the data directory are updated often with improvements.
+ * Cards, Photoshop design files, resources, and the completed Set files are all hosted at the other repo, usmcgeek/mer
 
 ## Features
  * Check "Set Fields" for options
@@ -18,6 +18,12 @@
    To control spell check, use the "mark errors" option.
  * Added support for French, German, and Spanish spell check dictionaries
  * Auto-replace to add special characters (fix Dunadan, Nazgul, etc, automatically)
+ * Promo Icon field added
+ * Easily add a Card set icon (like the DC team does)
+
+## 5 Aug 2020
+ * Added Full Art styles based on Chan's mockups for fun
+ * Updated more classic style card templates
 
 ## 4 Aug 2020
  * Added upscaled version of the classic frames from the old templates
