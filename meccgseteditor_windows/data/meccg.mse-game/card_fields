@@ -98,7 +98,10 @@ card field:
 		choice: Faction
 		choice: Item
 		choice: Item DiagonalPB
-		choice: SiteStage
+		choice:
+			name: SiteStage
+			choice: StageSite
+			choice: StageSiteUnique
 	description: Type
 	card list visible: true
 

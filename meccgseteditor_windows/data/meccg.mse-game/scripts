@@ -27,6 +27,7 @@ include file: language
 		is_site := { contains(card.background, match: "Site") }
 		is_minion_site := { contains(card.background, match: "MinionSite") }
 		is_balrog_site := { contains(card.background, match: "BalrogSite") }
+		is_stage_site_unique := { contains(card.background, match: "StageSiteUnique")}
 		is_stage_site := { contains(card.background, match: "SiteStage") }
 		is_minionhero_site := { contains(card.background, match: "SiteMH") }
 		is_event := { contains(card.background, match: "Event") }
