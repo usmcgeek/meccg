@@ -141,7 +141,8 @@ card style:
 			Stage Faction: /meccg-remastered.mse-include/cards/stage_faction.png
 			Stage Item: /meccg-remastered.mse-include/cards/stage_item.png
 			Stage Item DiagonalPB: /meccg-remastered.mse-include/cards/stage_item.png
-			Stage SiteStage: /meccg-remastered.mse-include/cards/stage_site.png
+			Stage SiteStage StageSite: /meccg-remastered.mse-include/cards/stage_site.png
+			Stage SiteStage StageSiteUnique: /meccg-remastered.mse-include/cards/stage_site_unique.png
 
 ###########################################################################
 ### Normal Card Title / Name
@@ -559,21 +560,22 @@ card style:
 
 # Fallen Wizard Field for Unique Resources
 	fw:
-		left: { if is_stage() and is_resource() then 64 else 1000 }
-		top: 550
+		left: { if is_stage() and is_resource() then 64 else if is_stage_site_unique() then 71 else 1000 }
+		top: { if is_stage_site_unique() then 542 else 550 }
 		width: 75
 		height: 80
 		z index: 1
 
 	fw icon:
-		left: { if is_stage() and is_resource() then 64 else 1000 }
-		top: 542
+		left: { if is_stage() and is_resource() then 64 else if is_stage_site_unique() then 71 else 1000 }
+		top: { if is_stage_site_unique() then 534 else 542 }
 		width: 70
 		height: 80
 		z index: 2
-		visible: { card.fw != "" and is_stage() }
+		visible: { card.fw != "" and is_stage() or is_stage_site_unique() }
 		render style: image
 		image: { stage_unique_icon() }
+
 
 ###########################################################################
 ### Middle field (Character Class - Event Type - Site Region)
