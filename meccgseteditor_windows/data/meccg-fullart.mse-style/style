@@ -131,8 +131,8 @@ card style:
 			Stage Faction: /meccg-fullart.mse-include/cards/stage_faction.png
 			Stage Item: /meccg-fullart.mse-include/cards/stage_item.png
 			Stage Item DiagonalPB: /meccg-fullart.mse-include/cards/stage_item.png
-			Stage SiteStage StageSite: /meccg-remastered.mse-include/cards/stage_site.png
-			Stage SiteStage StageSiteUnique: /meccg-remastered.mse-include/cards/stage_site_unique.png
+			Stage SiteStage StageSite: /meccg-fullart.mse-include/cards/stage_site.png
+			Stage SiteStage StageSiteUnique: /meccg-fullart.mse-include/cards/stage_site_unique.png
 
 
 ###########################################################################
@@ -547,7 +547,7 @@ card style:
 		visible: { has_sp() and card.sp != "" }
 		render style: image
 		choice images:
-			default: /meccg-remastered.mse-include/sp.png
+			default: /meccg-fullart.mse-include/sp.png
 
 # Stage Points Bracketed
 	sp2:
@@ -573,7 +573,7 @@ card style:
 		visible: { has_sp() and card.sp2 != "" }
 		render style: image
 		choice images:
-			default: /meccg-remastered.mse-include/sp_alt.png
+			default: /meccg-fullart.mse-include/sp_alt.png
 
 # Fallen Wizard Field for Unique Resources
 	fw:

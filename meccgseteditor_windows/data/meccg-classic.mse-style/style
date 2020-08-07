@@ -141,8 +141,8 @@ card style:
 			Stage Faction: /meccg-classic.mse-include/cards/stage_faction.png
 			Stage Item: /meccg-classic.mse-include/cards/stage_item.png
 			Stage Item DiagonalPB: /meccg-classic.mse-include/cards/stage_item.png
-			Stage SiteStage StageSite: /meccg-remastered.mse-include/cards/stage_site.png
-			Stage SiteStage StageSiteUnique: /meccg-remastered.mse-include/cards/stage_site_unique.png
+			Stage SiteStage StageSite: /meccg-classic.mse-include/cards/stage_site.png
+			Stage SiteStage StageSiteUnique: /meccg-classic.mse-include/cards/stage_site_unique.png
 
 ###########################################################################
 ### Normal Card Title / Name
@@ -556,7 +556,7 @@ card style:
 		visible: { has_sp() and card.sp != "" }
 		render style: image
 		choice images:
-			default: /meccg-remastered.mse-include/sp.png
+			default: /meccg-classic.mse-include/sp.png
 
 # Stage Points Bracketed
 	sp2:
@@ -582,7 +582,7 @@ card style:
 		visible: { has_sp() and card.sp2 != "" }
 		render style: image
 		choice images:
-			default: /meccg-remastered.mse-include/sp_alt.png
+			default: /meccg-classic.mse-include/sp_alt.png
 
 # Fallen Wizard Field for Unique Resources
 	fw:
@@ -593,7 +593,7 @@ card style:
 		z index: 1
 
 	fw icon:
-		left: { if is_stage() and is_resource() then 64 else if is_stage_site_unique() then 71 else 1000 }
+		left: { if is_stage() and is_resource() then 64 else if is_stage_site_unique() then 73 else 1000 }
 		top: { if is_stage_site_unique() then 534 else 542 }
 		width: 70
 		height: 80
