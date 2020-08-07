@@ -1,7 +1,7 @@
 # Middle Earth Remastered Repo
 
 * Check the [Wiki](https://github.com/usmcgeek/meccg/wiki/MECCG-Set-Editor:-Getting-Started) for guides and tips!
-* Looking for the cards? The remastered repo is [here]{https://github.com/usmcgeek/mer)
+* Looking for the cards? The remastered repo is [here](https://github.com/usmcgeek/mer)
 
 ## Notes:
  * Note - while this is compatible with normal magicseteditor, you will not get full resolution with the normal one.
