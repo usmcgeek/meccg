@@ -21,6 +21,11 @@
  * Promo Icon field added
  * Easily add a Card set icon (like the DC team does)
 
+## 6 Aug 2020
+ * Updated more classic style templates and updated positioning
+ * Added Avatar Specific Stage Sites (ie Rhosgobel from White hand)
+ * Added bracketed Stage Points (ie In the Grip of Ambition from ATS)
+
 ## 5 Aug 2020
  * Added Full Art styles based on Chan's mockups for fun
  * Updated more classic style card templates
