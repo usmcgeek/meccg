@@ -216,12 +216,6 @@ card field:
 
 card field:
 	type: text
-	name: sp
-	script: numbers_only(value)
-	description: Stage poins
-
-card field:
-	type: text
 	name: playable
 	#script: symbols_only(value)
 	multi line: true
@@ -414,8 +408,26 @@ card field:
 	choice: Restricted
 
 card field:
+	type: text
+	name: sp
+	script: numbers_only(value)
+	description: Stage points
+
+card field:
 	type: choice
 	name: sp icon
+	editable: false
+	choice: default
+
+card field:
+	type: text
+	name: sp2
+	script: numbers_only(value)
+	description: Stage points Bracketed
+
+card field:
+	type: choice
+	name: sp icon2
 	editable: false
 	choice: default
 

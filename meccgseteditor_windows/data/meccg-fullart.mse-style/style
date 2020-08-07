@@ -525,8 +525,8 @@ card style:
 
 # Stage Points
 	sp:
-		left: { if is_stage() and is_site() then 85 else if has_sp() then 77 else 1000 }
-		top: 415
+		left: { if is_stage() and is_site() then 88 else if has_sp() then 77 else 1000 }
+		top: { if is_stage_site_unique() then 365 else 415 }
 		width: 40
 		height: 40
 		z index: 4
@@ -540,14 +540,40 @@ card style:
 
 	sp icon:
 		left: { if is_site() then 72 else 61 }
-		top: 402
+		top: { if is_stage_site_unique() then 352 else 402 }
 		width: 70
 		height: 70
 		z index: 2
 		visible: { has_sp() and card.sp != "" }
 		render style: image
 		choice images:
-			default: /meccg-fullart.mse-include/sp.png
+			default: /meccg-remastered.mse-include/sp.png
+
+# Stage Points Bracketed
+	sp2:
+		left: { if is_stage() and is_site() then 89 else if has_sp() then 77 else 1000 }
+		top: { if is_stage_site_unique() then 425 else 486 }
+		width: 40
+		height: 40
+		z index: 4
+		alignment: center shrink-overflow
+		font:
+			name: MECCGBold
+			color: rgb(13,11,14)
+			size: 22
+			weight: bold
+			scale down to: 8
+
+	sp icon2:
+		left: { if is_site() then 80 else 68 }
+		top: { if is_stage_site_unique() then 421 else 482 }
+		width: 55
+		height: 45
+		z index: 2
+		visible: { has_sp() and card.sp2 != "" }
+		render style: image
+		choice images:
+			default: /meccg-remastered.mse-include/sp_alt.png
 
 # Fallen Wizard Field for Unique Resources
 	fw:
