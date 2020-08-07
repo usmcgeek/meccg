@@ -222,7 +222,7 @@ flavor_text_color := { rgb(13,11,14) }
 
 flavor_text_size := { 18 }
 
-flavor_text_pad_top := { 2 }
+flavor_text_pad_top := { 10 }
 
 ################################################################
 ### Region Cards
