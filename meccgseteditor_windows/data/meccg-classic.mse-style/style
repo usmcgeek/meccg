@@ -343,10 +343,10 @@ card style:
 ### Normal Card and Site Card Image Box
 ###########################################################################
 	picture:
-		left: { if is_site() then 145 else if is_region() then 2000 else 136 }
-		top: { if is_site() then 145 else if is_region() then 2000 else 142 }
-		width: { if is_site() then 515 else 534 }
-		height: { if is_site() then 436 else 453 }
+		left: { if is_site() then 145 else if is_region() then 2000 else 138 }
+		top: { if is_site() then 145 else if is_region() then 2000 else 144 }
+		width: { if is_site() then 515 else 528 }
+		height: { if is_site() then 436 else 447 }
 		visible: { not is_region()}
 		mask: { if is_site() then "/meccg-classic.mse-include/masks/site_card_picture_mask.png" else "/meccg-classic.mse-include/masks/card_picture_mask.png" }
 
@@ -534,7 +534,7 @@ card style:
 
 # Stage Points
 	sp:
-		left: { if is_stage() and is_site() then 88 else if has_sp() then 77 else 1000 }
+		left: { if is_stage() and is_site() then 88 else if has_sp() then 82 else 1000 }
 		top: { if is_stage_site_unique() then 365 else 415 }
 		width: 40
 		height: 40
@@ -548,7 +548,7 @@ card style:
 			scale down to: 8
 
 	sp icon:
-		left: { if is_site() then 72 else 61 }
+		left: { if is_site() then 72 else 66 }
 		top: { if is_stage_site_unique() then 352 else 402 }
 		width: 70
 		height: 70
@@ -560,7 +560,7 @@ card style:
 
 # Stage Points Bracketed
 	sp2:
-		left: { if is_stage() and is_site() then 89 else if has_sp() then 77 else 1000 }
+		left: { if is_stage() and is_site() then 89 else if has_sp() then 82 else 1000 }
 		top: { if is_stage_site_unique() then 425 else 486 }
 		width: 40
 		height: 40
@@ -574,7 +574,7 @@ card style:
 			scale down to: 8
 
 	sp icon2:
-		left: { if is_site() then 80 else 68 }
+		left: { if is_site() then 80 else 75 }
 		top: { if is_stage_site_unique() then 421 else 482 }
 		width: 55
 		height: 45
@@ -749,7 +749,7 @@ card style:
 
 # Combined Prowess / Body field
 	pb:
-		left: { if is_site() or is_region() or has_diagonalprowess() then 800 else 48 }
+		left: { if is_site() or is_region() or has_diagonalprowess() then 800 else 49 }
 		top: 928
 		width: 90
 		height: 60
