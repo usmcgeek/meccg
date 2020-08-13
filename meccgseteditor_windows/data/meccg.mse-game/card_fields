@@ -189,6 +189,15 @@ card field:
 
 card field:
 	type: text
+	name: rules separator
+	show statistics: false
+	default: " "
+	script: rules_separator_filter(value)
+	editable: false
+	description: spacer for rules and flavor
+
+card field:
+	type: text
 	name: flavor text
 	show statistics: false
 	default: "Flavor Text"
@@ -342,7 +351,8 @@ card field:
 	type: text
 	name: home site
 	multi line: true
-	default: "<prefix><b>Home Site:</b> </prefix>"
+	default: "<b>Home Site: </b>"
+	editable: true
 	description: Home site
 
 card field:
