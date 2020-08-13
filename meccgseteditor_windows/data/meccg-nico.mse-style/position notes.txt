@@ -1,0 +1,21 @@
+CP Icon: left 622 top 931
+
+Right sidebar items: left 654
+	set letter: top 855
+	promo top 817
+	dc icon top 777
+	random top 702
+
+Name: left 156 top 69
+
+image normal left 139 top 147 (GOOD)
+	width:to 663 height to 591
+
+art: left 357 top 948
+
+text box left 94 top 655
+
+Prow and Body subtract 4 globally
+#need to modify minion char (up and right)
+#hero char (shift up)
+#site - shift name down / shift right bar left
