@@ -206,9 +206,9 @@ text_pad_right := { 4 }
 
 text_pad_bottom := { 2 }
 
-text_line_height_hard := { 1.3 }
+text_line_height_hard := { 1.2 }
 
-text_line_height_line := { 1.1 }
+text_line_height_line := { 1.5 }
 
 text_mask := {
 	"/meccg-remastered.mse-include/masks/mask_text.png"
