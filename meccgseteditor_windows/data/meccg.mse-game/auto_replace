@@ -248,7 +248,7 @@ auto replace:
 	replace:	Barad-dûr
 auto replace:
 	match:	Ghan-buri-Ghan
-	replace:	Ghán-buri-Ghán
+	replace:	Ghân-buri-Ghân
 auto replace:
 	match:	Mumak
 	replace:	Mûmak
