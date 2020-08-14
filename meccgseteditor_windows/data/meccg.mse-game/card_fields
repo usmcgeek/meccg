@@ -349,9 +349,17 @@ card field:
 
 card field:
 	type: text
-	name: home site
+	name: home site prefix
 	multi line: true
 	default: "<b>Home Site: </b>"
+	description: Editable Home Site Text
+
+card field:
+	type: text
+	name: home site
+	multi line: true
+	#default: "<b>Home Site: </b>"
+	script: forward_editor(field: card.home_site_prefix)
 	editable: true
 	description: Home site
 

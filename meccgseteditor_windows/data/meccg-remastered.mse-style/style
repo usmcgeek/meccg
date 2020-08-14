@@ -286,6 +286,9 @@ card style:
 		padding bottom: { site_text_pad_bottom() }
 		line height hard: { site_text_line_height_hard() }
 		line height line: { site_text_line_height_line() }
+		line height soft: 0.9
+		#line height hard max: 1.3
+		#line height line max: 1.6
 		mask: { site_text_mask() }
 
 	site path:
