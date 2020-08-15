@@ -184,6 +184,7 @@ flavor_text_filter :=
 ######## Site Text Filter and Checks
 ###################################################################
 
+
 ###############Assign Variables for common text prefix
 minion_site_first := "<b><i>" + "Nearest Darkhaven: " + "</i></b>"
 hero_site_first := "<b><i>" + "Nearest Haven: " + "</i></b>"
