@@ -22,6 +22,10 @@
  * Promo Icon field added
  * Easily add a Card set icon (like the DC team does)
 
+## 14 Aug 2020
+ * Changes to allow "Home Site:" to be edited for different languages
+ * Fixed spacing between Rules and Flavor Text on non-site cards in Remastered Style
+
 ## 6 Aug 2020
  * Updated more classic style templates and updated positioning
  * Added Avatar Specific Stage Sites (ie Rhosgobel from White hand)
