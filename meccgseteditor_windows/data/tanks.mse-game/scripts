@@ -18,6 +18,7 @@ nation_icon := {
 	else if card.nation =="Japan" then "japan.png"
 	else if card.nation =="Soviet" then "soviet.png"
 	else if card.nation =="ModernAmerica" then "modern_america.png"
+	else if card.nation =="ModernFrance" then "modern_france.png"
 	else if card.nation =="ModernGermany" then "modern_west_germany.png"
 	else "america.png"
 

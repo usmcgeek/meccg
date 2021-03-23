@@ -68,6 +68,7 @@ card field:
 	choice: Soviet
 	choice: Japan
 	choice: ModernAmerica
+	choice: ModernFrance
 	choice: ModernGermany
 
 card field:
