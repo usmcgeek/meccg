@@ -1,5 +1,7 @@
-# Middle Earth Remastered Repo
+# Middle Earth CCG Set Editor Custom
 
+* Custom Fork of Magic Set Editor to support high resolution export and creation
+* Added Support for TANKS TableTop Skirmish Game
 * Check the [Wiki](https://github.com/usmcgeek/meccg/wiki/MECCG-Set-Editor:-Getting-Started) for guides and tips!
 * Looking for the cards? The remastered repo is [here](https://github.com/usmcgeek/mer)
 
