@@ -8,6 +8,9 @@ horizontal space: 0
 vertical space: 3
 symbol:
 	code: am
+	image: ammo2.png
+symbol:
+	code: AM
 	image: ammo.png
 symbol:
 	code: arm
@@ -29,6 +32,7 @@ symbol:
 # Insert-symbol menu
 insert symbol menu:
 	item: am
+	item: AM
 	item: arm
 	item: atk
 	item: h
