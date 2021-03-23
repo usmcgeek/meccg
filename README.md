@@ -22,6 +22,10 @@
  * Promo Icon field added
  * Easily add a Card set icon (like the DC team does)
 
+## 23 Mar 2021
+ * Added Game Templates and Support for TANKS miniatures game cards
+ * Current template support for Classic and Modern Vehicle Cards - No Crew or Damage/Critical cards yet - still WIP
+
 ## 14 Aug 2020
  * Changes to allow "Home Site:" to be edited for different languages
  * Fixed spacing between Rules and Flavor Text on non-site cards in Remastered Style
