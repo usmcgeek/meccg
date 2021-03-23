@@ -33,6 +33,14 @@ card field:
 		choice: Modern Helo - 2 Ammo 1 Crew
 		choice: Modern Helo - 2 Ammo 2 Crew
 		choice: Modern Helo - 3 Ammo 1 Crew
+	choice:
+		name: Small Cards
+		choice: WW2 Ammo
+		choice: WW2 Upgrade
+		choice: WW2 Crew
+		choice: Mod Ammo
+		choice: Mod Upgrade
+		choice: Mod Crew
 
 	description: Type
 	card list visible: true
@@ -70,10 +78,47 @@ card field:
 	choice: ModernAmerica
 	choice: ModernFrance
 	choice: ModernGermany
+	choice: General
 
 card field:
 	type: choice
 	name: nation icon
+	editable: false
+	choice: default
+	
+card field:
+	type: choice
+	name: smalltype
+	description: Small Card Icon
+	choice:
+	choice: Ammo
+	choice: Armor
+	choice: Commander
+	choice: Crewman
+	choice: Doctrine
+	choice: Driver
+	choice: Engine
+	choice: Equipment
+	choice: Gunner
+	choice: Loader
+	choice: Radio
+
+card field:
+	type: choice
+	name: smallicon
+	editable: false
+	choice: default
+
+card field:
+	type: choice
+	name: hero
+	description: Hero Icon
+	choice:
+	choice: Hero
+
+card field:
+	type: choice
+	name: heroicon
 	editable: false
 	choice: default
 
@@ -85,6 +130,21 @@ card field:
 	card list visible: true
 	description: Keyword
 
+card field:
+	type: text
+	name: name icon
+	identifying: false
+	show statistics: false
+	card list visible: true
+	description: Small Card Name Icon
+
+card field:
+	type: text
+	name: back points
+	identifying: false
+	show statistics: false
+	card list visible: true
+	description: Small Card Back Points
 
 
 card field:

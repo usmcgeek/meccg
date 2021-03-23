@@ -73,15 +73,21 @@ card style:
 			Aircraft Modern Helo - 2 Ammo 1 Crew: modern_helo_2ammo_1crew.png
 			Aircraft Modern Helo - 2 Ammo 2 Crew: modern_helo_2ammo_2crew.png
 			Aircraft Modern Helo - 3 Ammo 1 Crew: modern_helo_3ammo_1crew.png
+			Small Cards WW2 Ammo: small_ammo_ww2.png
+			Small Cards WW2 Upgrade: small_upgrade_ww2.png
+			Small Cards WW2 Crew: small_crew_ww2.png
+			Small Cards Mod Ammo: small_ammo_mod.png
+			Small Cards Mod Upgrade: small_upgrade_mod.png
+			Small Cards Mod Crew: small_crew_mod.png
 
 ###########################################################################
 ### Normal Card Title / Name
 ###########################################################################
 
 	name:
-		left: 74
-		top: 64
-		width: 428
+		left: { if is_small() then 70 else 74 }
+		top: { if is_small() then 60 else 64 }
+		width: { if is_small() then 342 else 428 }
 		height: 47
 		z index: 1
 		alignment: middle left shrink-overflow
@@ -93,8 +99,8 @@ card style:
 			scale down to: 6
 			
 	points:
-		left: 516
-		top: 64
+		left: { if is_small() then 473 else 516 }
+		top: { if is_small() then 60 else 64 }
 		width: 54
 		height: 47
 		z index: 1
@@ -106,23 +112,89 @@ card style:
 			weight: bold
 			scale down to: 6
 
+	name icon:
+		left: 412
+		top: 60
+		width: 48
+		height: 47
+		z index: 1
+		visible: { if is_small() then "true" else "false" }
+		alignment: middle center shrink-overflow
+		symbol font:
+			name: tanks-icons
+			size: 34
+			scale down to: 10
+
+	back points:
+		left: 260
+		top: 670
+		width: 240
+		height: 240
+		z index: 1
+		visible: { if is_small() then "true" else "false" }
+		alignment: middle center shrink-overflow
+		font:
+			name: Myriad Pro
+			color: black
+			size: 140
+			weight: bold
+			scale down to: 6
+
 # Nation Selectors
 	nation:
-		left: 640
+		left: { if is_small() then 560 else 640 }
 		top: 80
 		width: 75
 		height: 75
 		z index: 1
 
 	nation icon:
-		left: 585
-		top: 11
-		width: 154
-		height: 152
+		left: { if is_small() then 546 else 585 }
+		top: { if is_small() then 53 else 11 }
+		width: { if is_small() then 120 else 154 }
+		height: { if is_small() then 121 else 152 }
 		z index: 2
 		visible: true
 		render style: image
 		image: { nation_icon() }
+		
+# SmallIcon Selectors
+	smalltype:
+		left: 530
+		top: 330
+		width: 100
+		height: 100
+		z index: 1
+		visible: { if is_small() then "true" else "false" }
+
+	smallicon:
+		left: 485
+		top: 288
+		width: 176
+		height: 176
+		z index: 2
+		visible: true
+		render style: image
+		image: { smallcard_icon() }
+		
+# HeroIcon Selectors
+	hero:
+		left: 620
+		top: 150
+		width: 75
+		height: 75
+		z index: 1
+		visible: { if is_small() then "true" else "false" }
+
+	heroicon:
+		left: 592
+		top: 133
+		width: 113
+		height: 169
+		z index: 2
+		visible: true
+		render style: image
+		image: { hero_icon() }
 			
 	keywords:
 		left: 74
@@ -130,6 +202,7 @@ card style:
 		width: 607
 		height: 44
 		z index: 1
+		visible: { if is_small() then "false" else "true" }
 		alignment: middle left shrink-overflow
 		font:
 			name: Myriad Pro Cond
@@ -144,6 +217,7 @@ card style:
 		width: 80
 		height: 150
 		z index: 1
+		visible: { if is_small() then "false" else "true" }
 		alignment: middle center shrink-overflow
 		font:
 			name: Myriad Pro
@@ -158,6 +232,7 @@ card style:
 		width: 80
 		height: 150
 		z index: 1
+		visible: { if is_small() then "false" else "true" }
 		alignment: middle center shrink-overflow
 		font:
 			name: Myriad Pro
@@ -172,6 +247,7 @@ card style:
 		width: 80
 		height: 150
 		z index: 1
+		visible: { if is_small() then "false" else "true" }
 		alignment: middle center shrink-overflow
 		font:
 			name: Myriad Pro
@@ -186,6 +262,7 @@ card style:
 		width: 80
 		height: 150
 		z index: 1
+		visible: { if is_small() then "false" else "true" }
 		alignment: middle center shrink-overflow
 		font:
 			name: Myriad Pro
@@ -201,6 +278,7 @@ card style:
 		width: 50
 		height: 20
 		z index: 1
+		visible: { if is_small() then "false" else "true" }
 
 	hp icon:
 		left: 619
@@ -208,7 +286,7 @@ card style:
 		width: 89
 		height: 184
 		z index: 2
-		visible: true
+		visible: { if is_small() then "false" else "true" }
 		render style: image
 		image: { hp_icon() }
 ###########################################################################
@@ -217,9 +295,9 @@ card style:
 
 	text:
 		left: 74
-		top: { if is_modern() then 690 else 695 }
-		width: 606
-		height: 275
+		top: { if is_modern() then 690 else if is_small() then 133 else 695 }
+		width: { if is_small() then 499 else 606 }
+		height: { if is_small() then 327 else 275 }
 		alignment: left shrink-overflow
 		z index: 2
 		font:
@@ -234,6 +312,7 @@ card style:
 		line height soft: 0.9
 		line height hard max: 1.3
 		line height line max: 1.6
+		mask: { if is_small() then "small_card_text_mask.png" else "text_mask.png" }
 
 ###########################################################################
 ### Normal Card Flavor Text Box
@@ -256,11 +335,12 @@ card style:
 		width: 633
 		height: 298
 		mask: image_mask.png
+		visible: { if is_small() then "false" else "true" }
 
 
 	copyright:
 		left: 250
-		top: 1000
+		top: { if is_small() then 485 else 1000 }
 		width: 440
 		height: 40
 		z index: 1

@@ -10,6 +10,7 @@ include file: language
 ######################Classic vs Modern Identification	
 
 	is_modern := { contains(card.background, match: "Modern") }
+	is_small := { contains(card.background, match: "Small") }
 
 ###########################################################Nation Icons Selection
 nation_icon := {
@@ -20,10 +21,32 @@ nation_icon := {
 	else if card.nation =="ModernAmerica" then "modern_america.png"
 	else if card.nation =="ModernFrance" then "modern_france.png"
 	else if card.nation =="ModernGermany" then "modern_west_germany.png"
+	else if card.nation =="General" then "general.png"
 	else "america.png"
 
 	}
-	
+
+###########################################################Small Card Icons Selection
+smallcard_icon := {
+	if card.smalltype == "Armor" then "armor_icon.png"
+	else if card.smalltype =="Commander" then "commander_icon.png"
+	else if card.smalltype =="Crewman" then "crewman_icon.png"
+	else if card.smalltype =="Doctrine" then "doctrine_icon.png"
+	else if card.smalltype =="Driver" then "driver_icon.png"
+	else if card.smalltype =="Engine" then "engine_icon.png"
+	else if card.smalltype =="Equipment" then "equipment_icon.png"
+	else if card.smalltype =="Gunner" then "gunner_icon.png"
+	else if card.smalltype =="Loader" then "loader_icon.png"
+	else if card.smalltype =="Radio" then "radio_icon.png"
+	else "ammo_icon.png"
+
+	}
+
+hero_icon := {
+	if card.hero == "Hero" then "hero_icon.png"
+	else "hero_blank.png"
+	}
+
 ###########################################################HP Boxes
 hp_icon := {
 	if card.hp == "2" then "2hp.png"
