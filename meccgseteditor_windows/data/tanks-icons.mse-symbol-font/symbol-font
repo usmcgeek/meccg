@@ -1,0 +1,36 @@
+mse version: 0.3.8
+version: 2021-03-22
+short name: icons
+position hint: 2
+
+image font size: 300
+horizontal space: 0
+vertical space: 3
+symbol:
+	code: am
+	image: ammo.png
+symbol:
+	code: arm
+	image: armor.png
+symbol:
+	code: atk
+	image: attack.png
+symbol:
+	code: h
+	image: helo.png
+symbol:
+	code: t
+	image: tank.png
+symbol:
+	code: init
+	image: initiative.png
+
+##############################################################
+# Insert-symbol menu
+insert symbol menu:
+	item: am
+	item: arm
+	item: atk
+	item: h
+	item: t
+	item: init

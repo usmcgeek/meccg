@@ -1,0 +1,191 @@
+##################################################################
+### Card Fields Go Here (Common Card Fields for all sets)
+##################################################################
+
+##################################################################
+### Card Background Drop Down Menu Choices
+##################################################################
+card field:
+	type: choice
+	name: background
+	card list name: Type
+	choice:
+		name: Tanks
+		choice: Tank - No Crew
+		choice: Tank - 1 Crew
+		choice: Tank - 2 Crew
+		choice: Tank - 3 Crew
+		choice: Tank - 4 Crew
+		choice: Modern Tank - No Crew
+		choice: Modern Tank - 1 Crew
+		choice: Modern Tank - 2 Crew
+		choice: Modern Tank - 3 Crew
+		choice: Modern Tank - 4 Crew
+	choice:
+		name: Aircraft
+		choice: Helo - 1 Ammo 1 Crew
+		choice: Helo - 1 Ammo 2 Crew
+		choice: Helo - 2 Ammo 1 Crew
+		choice: Helo - 2 Ammo 2 Crew
+		choice: Helo - 3 Ammo 1 Crew
+		choice: Modern Helo - 1 Ammo 1 Crew
+		choice: Modern Helo - 1 Ammo 2 Crew
+		choice: Modern Helo - 2 Ammo 1 Crew
+		choice: Modern Helo - 2 Ammo 2 Crew
+		choice: Modern Helo - 3 Ammo 1 Crew
+
+	description: Type
+	card list visible: true
+
+###########################################################################
+### Card Fields
+###########################################################################
+
+card field:
+	type: text
+	name: name
+	identifying: true
+	show statistics: false
+	card list visible: true
+	description: Name
+	
+card field:
+	type: text
+	name: points
+	identifying: false
+	show statistics: false
+	card list visible: true
+	description: Points Cost
+	
+card field:
+	type: choice
+	name: nation
+	description: Nation Icon
+	choice:
+	choice: America
+	choice: Britain
+	choice: Germany
+	choice: Soviet
+	choice: Japan
+	choice: ModernAmerica
+	choice: ModernGermany
+
+card field:
+	type: choice
+	name: nation icon
+	editable: false
+	choice: default
+
+card field:
+	type: text
+	name: keywords
+	identifying: false
+	show statistics: false
+	card list visible: true
+	description: Keyword
+
+
+
+card field:
+	type: image
+	name: picture
+	show statistics: false
+	description: Art; double click to choose
+
+card field:
+	type: text
+	name: initiative
+	identifying: false
+	show statistics: false
+	card list visible: true
+	description: Initiative Value
+	
+card field:
+	type: text
+	name: attack
+	identifying: false
+	show statistics: false
+	card list visible: true
+	description: Attack Value
+	
+card field:
+	type: text
+	name: defense
+	identifying: false
+	show statistics: false
+	card list visible: true
+	description: Defense Value
+	
+card field:
+	type: text
+	name: damage
+	identifying: false
+	show statistics: false
+	card list visible: true
+	description: Damage Capacity
+	
+card field:
+	type: choice
+	name: hp
+	description: HitPoint Boxes
+	choice:
+	choice: 1
+	choice: 2
+	choice: 3
+	choice: 4
+	choice: 5
+	choice: 6
+	choice: 7
+	choice: 8
+	choice: 9
+	choice: 10
+
+card field:
+	type: choice
+	name: hp icon
+	editable: false
+	choice: default
+
+################################################Rules and Flavor Text - Normal Cards
+
+card field:
+	type: text
+	name: rules text
+	show statistics: false
+	default: "Rules Text"
+	script: text_filter(value)
+	multi line: true
+	description: Rules text
+
+card field:
+	type: text
+	name: rules separator
+	show statistics: false
+	default: " "
+	script: rules_separator_filter(value)
+	editable: false
+	description: spacer for rules and flavor
+
+card field:
+	type: text
+	name: flavor text
+	show statistics: false
+	default: "Flavor Text"
+	script: flavor_text_filter(value)
+	multi line: true
+	description: Flavor text
+
+card field:
+	type: text
+	name: text
+	show statistics: false
+	save value: false
+	multi line: true
+	script: combined_editor(field1: card.rules_text, separator: "<line>\n</line>", field2: card.flavor_text)
+	description: Text
+
+card field:
+	type: text
+	name: copyright
+	description: Copyright
+	script: if set.copyright != "" then set.copyright else ""

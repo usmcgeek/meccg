@@ -1,0 +1,279 @@
+mse version: 0.3.8
+game: tanks
+full name: Tanks 2021
+short name: Tanks
+icon: icon.png
+position hint: 001
+
+version: 2021-03-22
+
+###########################################################################
+### Dependencies
+###########################################################################
+
+depends on:
+	package: tanks.mse-game
+	version: 2021-03-21
+
+depends on:
+	package: tanks-icons.mse-symbol-font
+	version: 2021-03-21
+
+#By: Jason Smith
+
+###########################################################################
+### Card Image Resolution Information
+###########################################################################
+
+card width: 750
+card height: 1050
+card dpi: 300
+
+###########################################################################
+### Fonts Used in this Style
+###########################################################################
+
+#  Myriad Pro Cond
+
+
+###########################################################################
+### Card Background Image Menu Selections
+###########################################################################
+
+card style:
+
+##############################################################################
+
+	background:
+		left: 0
+		top: 0
+		width: 750
+		height: 1050
+		z index: -1
+		render style: image
+		popup style: in place
+		choice images:
+			Tanks Tank - No Crew: tank_no_crew.png
+			Tanks Tank - 1 Crew: tank_1_crew.png
+			Tanks Tank - 2 Crew: tank_2_crew.png
+			Tanks Tank - 3 Crew: tank_3_crew.png
+			Tanks Tank - 4 Crew: tank_4_crew.png
+			Tanks Modern Tank - No Crew: modern_tank_no_crew.png
+			Tanks Modern Tank - 1 Crew: modern_tank_1_crew.png
+			Tanks Modern Tank - 2 Crew: modern_tank_2_crew.png
+			Tanks Modern Tank - 3 Crew: modern_tank_3_crew.png
+			Tanks Modern Tank - 4 Crew: modern_tank_4_crew.png
+			Aircraft Helo - 1 Ammo 1 Crew: helo_1ammo_1crew.png
+			Aircraft Helo - 1 Ammo 2 Crew: helo_1ammo_2crew.png
+			Aircraft Helo - 2 Ammo 1 Crew: helo_2ammo_1crew.png
+			Aircraft Helo - 2 Ammo 2 Crew: helo_2ammo_2crew.png
+			Aircraft Helo - 3 Ammo 1 Crew: helo_3ammo_1crew.png
+			Aircraft Modern Helo - 1 Ammo 1 Crew: modern_helo_1ammo_1crew.png
+			Aircraft Modern Helo - 1 Ammo 2 Crew: modern_helo_1ammo_2crew.png
+			Aircraft Modern Helo - 2 Ammo 1 Crew: modern_helo_2ammo_1crew.png
+			Aircraft Modern Helo - 2 Ammo 2 Crew: modern_helo_2ammo_2crew.png
+			Aircraft Modern Helo - 3 Ammo 1 Crew: modern_helo_3ammo_1crew.png
+
+###########################################################################
+### Normal Card Title / Name
+###########################################################################
+
+	name:
+		left: 74
+		top: 64
+		width: 428
+		height: 47
+		z index: 1
+		alignment: middle left shrink-overflow
+		font:
+			name: Myriad Pro Cond
+			color: black
+			size: 30
+			weight: bold
+			scale down to: 6
+			
+	points:
+		left: 516
+		top: 64
+		width: 54
+		height: 47
+		z index: 1
+		alignment: middle center shrink-overflow
+		font:
+			name: Myriad Pro Cond
+			color: black
+			size: 30
+			weight: bold
+			scale down to: 6
+
+# Nation Selectors
+	nation:
+		left: 640
+		top: 80
+		width: 75
+		height: 75
+		z index: 1
+
+	nation icon:
+		left: 585
+		top: 11
+		width: 154
+		height: 152
+		z index: 2
+		visible: true
+		render style: image
+		image: { nation_icon() }
+			
+	keywords:
+		left: 74
+		top: 443
+		width: 607
+		height: 44
+		z index: 1
+		alignment: middle left shrink-overflow
+		font:
+			name: Myriad Pro Cond
+			color: black
+			size: 30
+			weight: bold
+			scale down to: 6
+			
+	initiative:
+		left: { if is_modern() then 97 else 93 }
+		top: { if is_modern() then 502 else 507 }
+		width: 80
+		height: 150
+		z index: 1
+		alignment: middle center shrink-overflow
+		font:
+			name: Myriad Pro
+			color: rgb(1,168,236)
+			size: 90
+			weight: bold
+			scale down to: 6
+			
+	attack:
+		left: { if is_modern() then 232 else 235 }
+		top: { if is_modern() then 502 else 507 }
+		width: 80
+		height: 150
+		z index: 1
+		alignment: middle center shrink-overflow
+		font:
+			name: Myriad Pro
+			color: rgb(199,19,26)
+			size: 90
+			weight: bold
+			scale down to: 6
+			
+	defense:
+		left: { if is_modern() then 371 else 371 }
+		top: { if is_modern() then 502 else 507 }
+		width: 80
+		height: 150
+		z index: 1
+		alignment: middle center shrink-overflow
+		font:
+			name: Myriad Pro
+			color: rgb(1,118,42)
+			size: 90
+			weight: bold
+			scale down to: 6
+			
+	damage:
+		left: { if is_modern() then 513 else 510 }
+		top: { if is_modern() then 502 else 507 }
+		width: 80
+		height: 150
+		z index: 1
+		alignment: middle center shrink-overflow
+		font:
+			name: Myriad Pro
+			color: black
+			size: 90
+			weight: bold
+			scale down to: 6
+			
+# HP Boxes
+	hp:
+		left: 640
+		top: 580
+		width: 50
+		height: 20
+		z index: 1
+
+	hp icon:
+		left: 619
+		top: { if is_modern() then 492 else 496 }
+		width: 89
+		height: 184
+		z index: 2
+		visible: true
+		render style: image
+		image: { hp_icon() }
+###########################################################################
+### Normal Card Rules Text Box
+###########################################################################
+
+	text:
+		left: 74
+		top: { if is_modern() then 690 else 695 }
+		width: 606
+		height: 275
+		alignment: left shrink-overflow
+		z index: 2
+		font:
+			name: Myriad Pro
+			color: black
+			size: 24
+			scale down to: 10
+		symbol font:
+			name: tanks-icons
+			size:26
+			scale down to: 10
+		line height soft: 0.9
+		line height hard max: 1.3
+		line height line max: 1.6
+
+###########################################################################
+### Normal Card Flavor Text Box
+###########################################################################
+
+	flavor text:
+		font:
+			name: Myriad Pro
+			color: black
+			size: 22
+			scale down to: 12
+
+
+###########################################################################
+### Normal Card and Site Card Image Box
+###########################################################################
+	picture:
+		left: 60
+		top: 132
+		width: 633
+		height: 298
+		mask: image_mask.png
+
+
+	copyright:
+		left: 250
+		top: 1000
+		width: 440
+		height: 40
+		z index: 1
+		alignment: center middle shrink-overflow
+		font:
+			name: Arial
+			color: white
+			weight: bold
+			size: 14
+			scale down to: 6
+
+###########################################################################
+###########################################################################
+### Extra Card Fields and Styles
+###########################################################################
+###########################################################################

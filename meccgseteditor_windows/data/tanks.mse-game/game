@@ -1,0 +1,22 @@
+﻿mse version: 0.3.8
+short name: Tanks
+full name: Tanks - FoW
+icon: icon.png
+position hint: 0
+
+version: 2021-03-22
+
+#By: Jason Smith
+
+
+################################################################## Scripts
+init script: include file: scripts
+
+#########################################Include Files for common items##############
+
+include file: card_fields
+include file: set_fields
+include file: auto_replace
+
+################################################################## No keywords
+has keywords: false

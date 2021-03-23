@@ -1,0 +1,98 @@
+############################################################## Localization
+
+include file: language
+
+#############################################################Default matching
+	numbers_only := filter_rule(match: "[*+0-9-]")
+	#symbols_only := filter_rule(match: "[?dDsSbBfFHKRwc]")
+	#sites_only := filter_text(match: "[DSBFHKR]", input: value)
+
+######################Classic vs Modern Identification	
+
+	is_modern := { contains(card.background, match: "Modern") }
+
+###########################################################Nation Icons Selection
+nation_icon := {
+	if card.nation == "Britain" then "britain.png"
+	else if card.nation =="Germany" then "germany.png"
+	else if card.nation =="Japan" then "japan.png"
+	else if card.nation =="Soviet" then "soviet.png"
+	else if card.nation =="ModernAmerica" then "modern_america.png"
+	else if card.nation =="ModernGermany" then "modern_west_germany.png"
+	else "america.png"
+
+	}
+	
+###########################################################HP Boxes
+hp_icon := {
+	if card.hp == "2" then "2hp.png"
+	else if card.hp =="3" then "3hp.png"
+	else if card.hp =="4" then "4hp.png"
+	else if card.hp =="5" then "5hp.png"
+	else if card.hp =="6" then "6hp.png"
+	else if card.hp =="7" then "7hp.png"
+	else if card.hp =="8" then "8hp.png"
+	else if card.hp =="9" then "9hp.png"
+	else if card.hp =="10" then "10hp.png"
+	else "1hp.png"
+
+	}
+	
+#######################################################################Spell Checking Filters
+text_filter :=
+	#Replace double dash to long dash
+	replace@(
+		match: "--"
+		replace: "—"
+	) +
+
+#################################################
+	# Spellcheck
+	{ if set.mark_errors then
+		check_spelling(
+			language: language().spellcheck_code,
+		)
+	  else input
+	} +
+	curly_quotes
+
+#################################################################
+#### Flavor Text Separator Filter and Checks
+#################################################################
+rules_separator_filter :=
+	#Set Size and Italics
+	{ "<size:6>"+input+"</size>" }
+#################################################################
+#### Flavor Text Filter and Checks
+#################################################################
+flavor_text_filter :=
+	#Replace double dash to long dash
+	replace@(
+		match: "--"
+		replace: { "<b>" + "—" }
+	) +
+	# Spellcheck
+	{ if set.mark_errors then
+		check_spelling(
+			language: language().spellcheck_code,
+		)
+	  else input
+	} +
+	#Set Size and Italics
+	{ "<size:22><i>"+input+"</i></size>" } +
+	curly_quotes
+
+########################################################################
+#### Color Lists
+########################################################################
+white := { rgb(255,255,255) }
+black := { rgb(0,0,0) }
+silver := {rgb(128,128,128)}
+gold := {rgb(200,180,0)}
+blue := {rgb(0,71,124)}
+green := {rgb(15,121,52)}
+darkred := {rgb(153,0,0)}
+darkgreen := {rgb(76,153,0)}
+lightblue := {rgb(0,204,204)}
+purple := {rgb(127,0,255)}
+orange := {rgb(255,128,0)}
