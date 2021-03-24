@@ -89,11 +89,33 @@ card field:
 	choice: AmericaBritain
 	choice: Germany
 	choice: Soviet
+	choice: France
 	choice: Japan
 	choice: ModernAmerica
-	choice: ModernFrance
 	choice: ModernGermany
 	choice: General
+	choice: Australia
+	choice: Belgium
+	choice: Bulgaria
+	choice: Canada
+	choice: Modern Canada
+	choice: Czechoslovakia
+	choice: Denmark
+	choice: Finland
+	choice: Greece
+	choice: Hungary
+	choice: India
+	choice: Italy
+	choice: Modern China
+	choice: Nationalist China
+	choice: Netherlands
+	choice: New Zealand
+	choice: Norway
+	choice: Phillipines
+	choice: Poland
+	choice: Romania
+	choice: South Africa
+	choice: Yugoslavia
 
 card field:
 	type: choice

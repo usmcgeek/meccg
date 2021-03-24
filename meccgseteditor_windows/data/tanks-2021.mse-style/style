@@ -98,7 +98,7 @@ card style:
 		font:
 			name: Myriad Pro Cond
 			color: black
-			size: 30
+			size: { if is_crit() then 40 else 30 }
 			weight: bold
 			scale down to: 6
 			
@@ -304,16 +304,16 @@ card style:
 		top: { if is_modern() then 690 else if is_small() then 133 else if is_crit() then 190 else 695 }
 		width: { if is_small() then 499 else 606 }
 		height: { if is_small() then 327 else if is_crit() then 470 else 275 }
-		alignment: left shrink-overflow
+		alignment: { if is_crit() then "middle center shrink-overflow" else "left shrink-overflow" }
 		z index: 2
 		font:
 			name: Myriad Pro
 			color: black
-			size: 24
+			size: { if is_crit() then 40 else 24 }
 			scale down to: 10
 		symbol font:
 			name: tanks-icons
-			size:26
+			size:{ if is_crit() then 40 else 26 }
 			scale down to: 10
 		line height soft: 0.9
 		line height hard max: 1.3

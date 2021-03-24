@@ -7,34 +7,46 @@ image font size: 300
 horizontal space: 0
 vertical space: 3
 symbol:
-	code: am
-	image: ammo2.png
+	code: initiative
+	image: initiative.png
 symbol:
-	code: AM
-	image: ammo.png
+	code: initiativeblue
+	image: initiative_blue.png
 symbol:
-	code: arm
-	image: armor.png
-symbol:
-	code: atk
+	code: attack
 	image: attack.png
 symbol:
-	code: h
+	code: attackred
+	image: attack_red.png
+symbol:
+	code: armor
+	image: armor.png
+symbol:
+	code: armorgreen
+	image: armor_green.png
+symbol:
+	code: helo
 	image: helo.png
 symbol:
-	code: t
+	code: tank
 	image: tank.png
 symbol:
-	code: init
-	image: initiative.png
+	code: ammo
+	image: ammo2.png
+symbol:
+	code: circleammo
+	image: ammocircle.png
 
 ##############################################################
 # Insert-symbol menu
 insert symbol menu:
-	item: am
-	item: AM
-	item: arm
-	item: atk
-	item: h
-	item: t
-	item: init
+	item: initiative
+	item: initiativeblue
+	item: attack
+	item: attackred
+	item: armor
+	item: armorgreen
+	item: helo
+	item: tank
+	item: ammo
+	item: circleammo
