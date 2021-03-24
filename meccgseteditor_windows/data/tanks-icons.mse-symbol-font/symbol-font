@@ -10,19 +10,19 @@ symbol:
 	code: initiative
 	image: initiative.png
 symbol:
-	code: initiativeblue
+	code: blueinitiative
 	image: initiative_blue.png
 symbol:
 	code: attack
 	image: attack.png
 symbol:
-	code: attackred
+	code: redattack
 	image: attack_red.png
 symbol:
 	code: armor
 	image: armor.png
 symbol:
-	code: armorgreen
+	code: greenarmor
 	image: armor_green.png
 symbol:
 	code: helo
@@ -41,11 +41,11 @@ symbol:
 # Insert-symbol menu
 insert symbol menu:
 	item: initiative
-	item: initiativeblue
+	item: blueinitiative
 	item: attack
-	item: attackred
+	item: redattack
 	item: armor
-	item: armorgreen
+	item: greenarmor
 	item: helo
 	item: tank
 	item: ammo
