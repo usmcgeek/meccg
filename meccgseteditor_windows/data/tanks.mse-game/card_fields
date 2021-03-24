@@ -41,6 +41,12 @@ card field:
 		choice: Mod Ammo
 		choice: Mod Upgrade
 		choice: Mod Crew
+	choice:
+		name: Crit Cards
+		choice: WW2 Repairable
+		choice: WW2 No Repair
+		choice: Mod Repairable
+		choice: Mod No Repair
 
 	description: Type
 	card list visible: true
@@ -64,6 +70,14 @@ card field:
 	show statistics: false
 	card list visible: true
 	description: Points Cost
+
+card field:
+	type: text
+	name: critdamage
+	identifying: false
+	show statistics: false
+	card list visible: true
+	description: Crit Damage
 	
 card field:
 	type: choice
@@ -72,6 +86,7 @@ card field:
 	choice:
 	choice: America
 	choice: Britain
+	choice: AmericaBritain
 	choice: Germany
 	choice: Soviet
 	choice: Japan

@@ -11,6 +11,7 @@ include file: language
 
 	is_modern := { contains(card.background, match: "Modern") }
 	is_small := { contains(card.background, match: "Small") }
+	is_crit := { contains(card.background, match: "Crit") }
 
 ###########################################################Nation Icons Selection
 nation_icon := {
@@ -22,6 +23,7 @@ nation_icon := {
 	else if card.nation =="ModernFrance" then "modern_france.png"
 	else if card.nation =="ModernGermany" then "modern_west_germany.png"
 	else if card.nation =="General" then "general.png"
+	else if card.nation =="AmericaBritain" then "america_britain.png"
 	else "america.png"
 
 	}

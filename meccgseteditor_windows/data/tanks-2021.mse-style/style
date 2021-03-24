@@ -79,6 +79,10 @@ card style:
 			Small Cards Mod Ammo: small_ammo_mod.png
 			Small Cards Mod Upgrade: small_upgrade_mod.png
 			Small Cards Mod Crew: small_crew_mod.png
+			Crit Cards WW2 Repairable: critcard_repair.png
+			Crit Cards WW2 No Repair: critcard.png
+			Crit Cards Mod Repairable: critcard_repair_mod.png
+			Crit Cards Mod No Repair: critcard_mod.png
 
 ###########################################################################
 ### Normal Card Title / Name
@@ -86,9 +90,9 @@ card style:
 
 	name:
 		left: { if is_small() then 70 else 74 }
-		top: { if is_small() then 60 else 64 }
-		width: { if is_small() then 342 else 428 }
-		height: 47
+		top: { if is_small() then 60 else if is_crit() then 86 else 64 }
+		width: { if is_small() then 342 else if is_crit() then 610 else 428 }
+		height: { if is_crit() then 70 else 47 }
 		z index: 1
 		alignment: middle left shrink-overflow
 		font:
@@ -104,6 +108,7 @@ card style:
 		width: 54
 		height: 47
 		z index: 1
+		visible: {if is_crit() then "false" else "true" }
 		alignment: middle center shrink-overflow
 		font:
 			name: Myriad Pro Cond
@@ -147,6 +152,7 @@ card style:
 		width: 75
 		height: 75
 		z index: 1
+		visible: {if is_crit() then "false" else "true" }
 
 	nation icon:
 		left: { if is_small() then 546 else 585 }
@@ -154,7 +160,7 @@ card style:
 		width: { if is_small() then 120 else 154 }
 		height: { if is_small() then 121 else 152 }
 		z index: 2
-		visible: true
+		visible: {if is_crit() then "false" else "true" }
 		render style: image
 		image: { nation_icon() }
 		
@@ -173,7 +179,7 @@ card style:
 		width: 176
 		height: 176
 		z index: 2
-		visible: true
+		visible: { if is_small() then "true" else "false" }
 		render style: image
 		image: { smallcard_icon() }
 		
@@ -192,7 +198,7 @@ card style:
 		width: 113
 		height: 169
 		z index: 2
-		visible: true
+		visible: { if is_small() then "true" else "false" }
 		render style: image
 		image: { hero_icon() }
 			
@@ -202,7 +208,7 @@ card style:
 		width: 607
 		height: 44
 		z index: 1
-		visible: { if is_small() then "false" else "true" }
+		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
 		alignment: middle left shrink-overflow
 		font:
 			name: Myriad Pro Cond
@@ -217,7 +223,7 @@ card style:
 		width: 80
 		height: 150
 		z index: 1
-		visible: { if is_small() then "false" else "true" }
+		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
 		alignment: middle center shrink-overflow
 		font:
 			name: Myriad Pro
@@ -232,7 +238,7 @@ card style:
 		width: 80
 		height: 150
 		z index: 1
-		visible: { if is_small() then "false" else "true" }
+		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
 		alignment: middle center shrink-overflow
 		font:
 			name: Myriad Pro
@@ -247,7 +253,7 @@ card style:
 		width: 80
 		height: 150
 		z index: 1
-		visible: { if is_small() then "false" else "true" }
+		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
 		alignment: middle center shrink-overflow
 		font:
 			name: Myriad Pro
@@ -262,7 +268,7 @@ card style:
 		width: 80
 		height: 150
 		z index: 1
-		visible: { if is_small() then "false" else "true" }
+		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
 		alignment: middle center shrink-overflow
 		font:
 			name: Myriad Pro
@@ -278,7 +284,7 @@ card style:
 		width: 50
 		height: 20
 		z index: 1
-		visible: { if is_small() then "false" else "true" }
+		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
 
 	hp icon:
 		left: 619
@@ -286,7 +292,7 @@ card style:
 		width: 89
 		height: 184
 		z index: 2
-		visible: { if is_small() then "false" else "true" }
+		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
 		render style: image
 		image: { hp_icon() }
 ###########################################################################
@@ -295,9 +301,9 @@ card style:
 
 	text:
 		left: 74
-		top: { if is_modern() then 690 else if is_small() then 133 else 695 }
+		top: { if is_modern() then 690 else if is_small() then 133 else if is_crit() then 190 else 695 }
 		width: { if is_small() then 499 else 606 }
-		height: { if is_small() then 327 else 275 }
+		height: { if is_small() then 327 else if is_crit() then 470 else 275 }
 		alignment: left shrink-overflow
 		z index: 2
 		font:
@@ -335,8 +341,21 @@ card style:
 		width: 633
 		height: 298
 		mask: image_mask.png
-		visible: { if is_small() then "false" else "true" }
+		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
 
+	critdamage:
+		left: 80
+		top: 695
+		width: 250
+		height: 250
+		z index: 1
+		alignment: center middle shrink-overflow
+		font:
+			name: Myriad Pro
+			color: rgb(254,0,0)
+			size: 160
+			weight: bold
+			scale down to: 12
 
 	copyright:
 		left: 250
