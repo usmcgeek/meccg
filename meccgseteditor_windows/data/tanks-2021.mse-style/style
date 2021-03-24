@@ -349,6 +349,7 @@ card style:
 		width: 250
 		height: 250
 		z index: 1
+		visible: { if is_crit() then "true" else "false" }
 		alignment: center middle shrink-overflow
 		font:
 			name: Myriad Pro
