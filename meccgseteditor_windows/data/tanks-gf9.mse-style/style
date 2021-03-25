@@ -1,0 +1,379 @@
+mse version: 0.3.8
+game: tanks
+full name: Tanks GF9
+short name: Tanks
+icon: icon.png
+position hint: 001
+
+version: 2021-03-22
+
+###########################################################################
+### Dependencies
+###########################################################################
+
+depends on:
+	package: tanks.mse-game
+	version: 2021-03-21
+
+depends on:
+	package: tanks-icons.mse-symbol-font
+	version: 2021-03-21
+
+#By: Jason Smith
+
+###########################################################################
+### Card Image Resolution Information
+###########################################################################
+
+card width: 750
+card height: 1050
+card dpi: 300
+
+###########################################################################
+### Fonts Used in this Style
+###########################################################################
+
+#  Myriad Pro Cond
+
+
+###########################################################################
+### Card Background Image Menu Selections
+###########################################################################
+
+card style:
+
+##############################################################################
+
+	background:
+		left: 0
+		top: 0
+		width: 750
+		height: 1050
+		z index: -1
+		render style: image
+		popup style: in place
+		choice images:
+			Tanks Tank - No Crew: tank_no_crew.png
+			Tanks Tank - 1 Crew: tank_1_crew.png
+			Tanks Tank - 2 Crew: tank_2_crew.png
+			Tanks Tank - 3 Crew: tank_3_crew.png
+			Tanks Tank - 4 Crew: tank_4_crew.png
+			Tanks Modern Tank - No Crew: modern_tank_no_crew.png
+			Tanks Modern Tank - 1 Crew: modern_tank_1_crew.png
+			Tanks Modern Tank - 2 Crew: modern_tank_2_crew.png
+			Tanks Modern Tank - 3 Crew: modern_tank_3_crew.png
+			Tanks Modern Tank - 4 Crew: modern_tank_4_crew.png
+			Aircraft Helo - 1 Ammo 1 Crew: helo_1ammo_1crew.png
+			Aircraft Helo - 1 Ammo 2 Crew: helo_1ammo_2crew.png
+			Aircraft Helo - 2 Ammo 1 Crew: helo_2ammo_1crew.png
+			Aircraft Helo - 2 Ammo 2 Crew: helo_2ammo_2crew.png
+			Aircraft Helo - 3 Ammo 1 Crew: helo_3ammo_1crew.png
+			Aircraft Modern Helo - 1 Ammo 1 Crew: modern_helo_1ammo_1crew.png
+			Aircraft Modern Helo - 1 Ammo 2 Crew: modern_helo_1ammo_2crew.png
+			Aircraft Modern Helo - 2 Ammo 1 Crew: modern_helo_2ammo_1crew.png
+			Aircraft Modern Helo - 2 Ammo 2 Crew: modern_helo_2ammo_2crew.png
+			Aircraft Modern Helo - 3 Ammo 1 Crew: modern_helo_3ammo_1crew.png
+			Small Cards WW2 Ammo: small_ammo_ww2.png
+			Small Cards WW2 Upgrade: small_upgrade_ww2.png
+			Small Cards WW2 Crew: small_crew_ww2.png
+			Small Cards Mod Ammo: small_ammo_mod.png
+			Small Cards Mod Upgrade: small_upgrade_mod.png
+			Small Cards Mod Crew: small_crew_mod.png
+			Crit Cards WW2 Repairable: critcard_repair.png
+			Crit Cards WW2 No Repair: critcard.png
+			Crit Cards Mod Repairable: critcard_repair_mod.png
+			Crit Cards Mod No Repair: critcard_mod.png
+
+###########################################################################
+### Normal Card Title / Name
+###########################################################################
+
+	name:
+		left: { if is_small() then 70 else 74 }
+		top: { if is_small() then 60 else if is_crit() then 86 else 64 }
+		width: { if is_small() then 342 else if is_crit() then 610 else 428 }
+		height: { if is_crit() then 70 else 47 }
+		z index: 1
+		alignment: middle left shrink-overflow
+		font:
+			name: Myriad Pro Cond
+			color: black
+			size: { if is_crit() then 40 else 30 }
+			weight: bold
+			scale down to: 6
+			
+	points:
+		left: { if is_small() then 473 else 516 }
+		top: { if is_small() then 60 else 64 }
+		width: 54
+		height: 47
+		z index: 1
+		visible: {if is_crit() then "false" else "true" }
+		alignment: middle center shrink-overflow
+		font:
+			name: Myriad Pro Cond
+			color: black
+			size: 30
+			weight: bold
+			scale down to: 6
+
+	name icon:
+		left: 412
+		top: 60
+		width: 48
+		height: 47
+		z index: 1
+		visible: { if is_small() then "true" else "false" }
+		alignment: middle center shrink-overflow
+		symbol font:
+			name: tanks-icons
+			size: 34
+			scale down to: 10
+
+	back points:
+		left: 260
+		top: 670
+		width: 240
+		height: 240
+		z index: 1
+		visible: { if is_small() then "true" else "false" }
+		alignment: middle center shrink-overflow
+		font:
+			name: Myriad Pro
+			color: black
+			size: 140
+			weight: bold
+			scale down to: 6
+
+# Nation Selectors
+	nation:
+		left: { if is_small() then 560 else 640 }
+		top: 80
+		width: 75
+		height: 75
+		z index: 1
+		visible: {if is_crit() then "false" else "true" }
+
+	nation icon:
+		left: { if is_small() then 546 else 585 }
+		top: { if is_small() then 53 else 11 }
+		width: { if is_small() then 120 else 154 }
+		height: { if is_small() then 121 else 152 }
+		z index: 2
+		visible: {if is_crit() then "false" else "true" }
+		render style: image
+		image: { nation_icon() }
+		
+# SmallIcon Selectors
+	smalltype:
+		left: 530
+		top: 330
+		width: 100
+		height: 100
+		z index: 1
+		visible: { if is_small() then "true" else "false" }
+
+	smallicon:
+		left: 485
+		top: 288
+		width: 176
+		height: 176
+		z index: 2
+		visible: { if is_small() then "true" else "false" }
+		render style: image
+		image: { smallcard_icon() }
+		
+# HeroIcon Selectors
+	hero:
+		left: 620
+		top: 150
+		width: 75
+		height: 75
+		z index: 1
+		visible: { if is_small() then "true" else "false" }
+
+	heroicon:
+		left: 592
+		top: 133
+		width: 113
+		height: 169
+		z index: 2
+		visible: { if is_small() then "true" else "false" }
+		render style: image
+		image: { hero_icon() }
+			
+	keywords:
+		left: 74
+		top: 443
+		width: 607
+		height: 44
+		z index: 1
+		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
+		alignment: middle left shrink-overflow
+		font:
+			name: Myriad Pro Cond
+			color: black
+			size: 30
+			weight: bold
+			scale down to: 6
+			
+	initiative:
+		left: { if is_modern() then 97 else 93 }
+		top: { if is_modern() then 502 else 507 }
+		width: 80
+		height: 150
+		z index: 1
+		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
+		alignment: middle center shrink-overflow
+		font:
+			name: Myriad Pro
+			color: rgb(1,168,236)
+			size: 90
+			weight: bold
+			scale down to: 6
+			
+	attack:
+		left: { if is_modern() then 232 else 235 }
+		top: { if is_modern() then 502 else 507 }
+		width: 80
+		height: 150
+		z index: 1
+		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
+		alignment: middle center shrink-overflow
+		font:
+			name: Myriad Pro
+			color: rgb(199,19,26)
+			size: 90
+			weight: bold
+			scale down to: 6
+			
+	defense:
+		left: { if is_modern() then 371 else 371 }
+		top: { if is_modern() then 502 else 507 }
+		width: 80
+		height: 150
+		z index: 1
+		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
+		alignment: middle center shrink-overflow
+		font:
+			name: Myriad Pro
+			color: rgb(1,118,42)
+			size: 90
+			weight: bold
+			scale down to: 6
+			
+	damage:
+		left: { if is_modern() then 513 else 510 }
+		top: { if is_modern() then 502 else 507 }
+		width: 80
+		height: 150
+		z index: 1
+		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
+		alignment: middle center shrink-overflow
+		font:
+			name: Myriad Pro
+			color: black
+			size: 90
+			weight: bold
+			scale down to: 6
+			
+# HP Boxes
+	hp:
+		left: 640
+		top: 580
+		width: 50
+		height: 20
+		z index: 1
+		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
+
+	hp icon:
+		left: 619
+		top: { if is_modern() then 492 else 496 }
+		width: 89
+		height: 184
+		z index: 2
+		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
+		render style: image
+		image: { hp_icon() }
+###########################################################################
+### Normal Card Rules Text Box
+###########################################################################
+
+	text:
+		left: 74
+		top: { if is_modern() then 690 else if is_small() then 133 else if is_crit() then 190 else 695 }
+		width: { if is_small() then 499 else 606 }
+		height: { if is_small() then 327 else if is_crit() then 470 else 275 }
+		alignment: { if is_crit() then "middle center shrink-overflow" else "left shrink-overflow" }
+		z index: 2
+		font:
+			name: Myriad Pro
+			color: black
+			size: { if is_crit() then 40 else 24 }
+			scale down to: 10
+		symbol font:
+			name: tanks-icons
+			size:{ if is_crit() then 40 else 30 }
+			scale down to: 10
+		line height soft: 0.9
+		line height hard max: 1.3
+		line height line max: 1.6
+		mask: { if is_small() then "small_card_text_mask.png" else "text_mask.png" }
+
+###########################################################################
+### Normal Card Flavor Text Box
+###########################################################################
+
+	flavor text:
+		font:
+			name: Myriad Pro
+			color: black
+			size: 22
+			scale down to: 12
+
+
+###########################################################################
+### Normal Card and Site Card Image Box
+###########################################################################
+	picture:
+		left: 60
+		top: 132
+		width: 633
+		height: 298
+		mask: image_mask.png
+		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }
+
+	critdamage:
+		left: 80
+		top: 695
+		width: 250
+		height: 250
+		z index: 1
+		visible: { if is_crit() then "true" else "false" }
+		alignment: center middle shrink-overflow
+		font:
+			name: Myriad Pro
+			color: rgb(254,0,0)
+			size: 160
+			weight: bold
+			scale down to: 12
+
+	copyright:
+		left: 250
+		top: { if is_small() then 485 else 1000 }
+		width: 440
+		height: 40
+		z index: 1
+		alignment: center middle shrink-overflow
+		font:
+			name: Arial
+			color: white
+			weight: bold
+			size: 14
+			scale down to: 6
+
+###########################################################################
+###########################################################################
+### Extra Card Fields and Styles
+###########################################################################
+###########################################################################

@@ -313,7 +313,7 @@ card style:
 			scale down to: 10
 		symbol font:
 			name: tanks-icons
-			size:{ if is_crit() then 40 else 26 }
+			size:{ if is_crit() then 40 else 30 }
 			scale down to: 10
 		line height soft: 0.9
 		line height hard max: 1.3
