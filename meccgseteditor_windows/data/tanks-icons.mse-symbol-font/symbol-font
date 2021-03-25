@@ -36,7 +36,100 @@ symbol:
 symbol:
 	code: circleammo
 	image: ammocircle.png
-
+symbol:
+	code: commander
+	image: commander.png
+symbol:
+	code: COMMANDER
+	image: commander_circle.png
+symbol:
+	code: crewman
+	image: crewman.png
+symbol:
+	code: CREWMAN
+	image: crewman_circle.png
+symbol:
+	code: doctrine
+	image: doctrine.png
+symbol:
+	code: DOCTRINE
+	image: doctrine_circle.png
+symbol:
+	code: driver
+	image: driver.png
+symbol:
+	code: DRIVER
+	image: driver_circle.png
+symbol:
+	code: engine
+	image: engine.png
+symbol:
+	code: ENGINE
+	image: engine_circle.png
+symbol:
+	code: equipment
+	image: equipment.png
+symbol:
+	code: EQUIPMENT
+	image: equipment_circle.png
+symbol:
+	code: gunner
+	image: gunner.png
+symbol:
+	code: GUNNER
+	image: gunner_circle.png
+symbol:
+	code: loader
+	image: loader.png
+symbol:
+	code: LOADER
+	image: loader_circle.png
+symbol:
+	code: radio
+	image: radio.png
+symbol:
+	code: RADIO
+	image: radio_circle.png
+symbol:
+	code: commander
+	image: commander.png
+symbol:
+	code: america
+	image: america.png
+symbol:
+	code: ambrit
+	image: america_britain.png
+symbol:
+	code: AMERICA
+	image: america_modern.png
+symbol:
+	code: britain
+	image: britain.png
+symbol:
+	code: CANADA
+	image: canada_modern.png
+symbol:
+	code: CHINA
+	image: china_modern.png
+symbol:
+	code: france
+	image: france.png
+symbol:
+	code: global
+	image: global.png
+symbol:
+	code: italy
+	image: italy.png
+symbol:
+	code: soviet
+	image: soviet.png
+symbol:
+	code: GERMAN
+	image: westgermany.png
+symbol:
+	code: german
+	image: german.png
+	
 ##############################################################
 # Insert-symbol menu
 insert symbol menu:
@@ -50,3 +143,33 @@ insert symbol menu:
 	item: tank
 	item: ammo
 	item: circleammo
+	item: commander
+	item: COMMANDER
+	item: crewman
+	item: CREWMAN
+	item: doctrine
+	item: DOCTRINE
+	item: driver
+	item: DRIVER
+	item: engine
+	item: ENGINE
+	item: equipment
+	item: EQUIPMENT
+	item: gunner
+	item: GUNNER
+	item: loader
+	item: LOADER
+	item: radio
+	item: RADIO
+	item: america
+	item: ambrit
+	item: AMERICA
+	item: britain
+	item: CANADA
+	item: CHINA
+	item: france
+	item: global
+	item: italy
+	item: soviet
+	item: german
+	item: GERMAN
