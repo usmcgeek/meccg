@@ -141,7 +141,7 @@ card style:
 		font:
 			name: Myriad Pro
 			color: black
-			size: 140
+			size: 90
 			weight: bold
 			scale down to: 6
 
@@ -338,7 +338,7 @@ card style:
 	picture:
 		left: 60
 		top: 132
-		width: 633
+		width: 634
 		height: 298
 		mask: image_mask.png
 		visible: { if is_small() then "false" else if is_crit() then "false" else "true" }

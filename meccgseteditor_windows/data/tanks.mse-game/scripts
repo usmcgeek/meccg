@@ -22,7 +22,7 @@ nation_icon := {
 	else if card.nation =="ModernAmerica" then "modern_america.png"
 	else if card.nation =="France" then "france.png"
 	else if card.nation =="ModernGermany" then "modern_west_germany.png"
-	else if card.nation =="General" then "general.png"
+	else if card.nation =="Global" then "general.png"
 	else if card.nation =="AmericaBritain" then "america_britain.png"
 	else if card.nation =="Australia" then "australia.png"
 	else if card.nation =="Belgium" then "belgium.png"
