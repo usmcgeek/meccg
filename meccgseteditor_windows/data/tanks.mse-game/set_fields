@@ -24,6 +24,7 @@ set field:
 set field:
 	type: text
 	name: copyright
+	multi line: true
 	description: Default copyright line (type (C) to insert a copyright symbol)
 
 
