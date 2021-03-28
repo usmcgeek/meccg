@@ -90,21 +90,18 @@ card field:
 	name: nation
 	description: Nation Icon
 	choice:
+	choice: Global
 	choice: America
 	choice: Britain
 	choice: AmericaBritain
 	choice: Germany
 	choice: Soviet
-	choice: France
 	choice: Japan
-	choice: ModernAmerica
-	choice: ModernGermany
-	choice: Global
+	choice: France
 	choice: Australia
 	choice: Belgium
 	choice: Bulgaria
 	choice: Canada
-	choice: Modern Canada
 	choice: Czechoslovakia
 	choice: Denmark
 	choice: Finland
@@ -112,7 +109,6 @@ card field:
 	choice: Hungary
 	choice: India
 	choice: Italy
-	choice: Modern China
 	choice: Nationalist China
 	choice: Netherlands
 	choice: New Zealand
@@ -122,6 +118,14 @@ card field:
 	choice: Romania
 	choice: South Africa
 	choice: Yugoslavia
+	choice: ModernAmerica
+	choice: ModernGermany
+	choice: ModernIsrael
+	choice: ModernSyria
+	choice: Modern Canada
+	choice: Modern China
+	choice: ModernFrance
+	choice: ModernSoviet
 
 card field:
 	type: choice

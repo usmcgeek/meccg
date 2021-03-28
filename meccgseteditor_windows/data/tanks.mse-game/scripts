@@ -24,8 +24,10 @@ nation_icon := {
 	else if card.nation =="Germany" then "germany.png"
 	else if card.nation =="Japan" then "japan.png"
 	else if card.nation =="Soviet" then "soviet.png"
+	else if card.nation =="ModernSoviet" then "soviet.png"
 	else if card.nation =="ModernAmerica" then "modern_america.png"
 	else if card.nation =="France" then "france.png"
+	else if card.nation =="ModernFrance" then "france.png"
 	else if card.nation =="ModernGermany" then "modern_west_germany.png"
 	else if card.nation =="Global" then "general.png"
 	else if card.nation =="AmericaBritain" then "america_britain.png"
@@ -51,6 +53,8 @@ nation_icon := {
 	else if card.nation =="Romania" then "romania.png"
 	else if card.nation =="South Africa" then "southafrica.png"
 	else if card.nation =="Yugoslavia" then "yugoslavia.png"
+	else if card.nation =="ModernIsrael" then "modern_israel.png"
+	else if card.nation =="ModernSyria" then "modern_syria.png"
 	else "america.png"
 
 	}

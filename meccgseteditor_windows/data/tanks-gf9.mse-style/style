@@ -140,7 +140,7 @@ card style:
 		width: 25
 		height: 30
 		z index: 1
-		visible: {if is_platoon() then "true" else "false" }
+		visible: { if is_platoon() then "true" else "false" }
 
 	platoonicon:
 		left: 515
@@ -148,7 +148,7 @@ card style:
 		width: 58
 		height: 57
 		z index: 2
-		visible: {if is_platoon() then "true" else "false" }
+		visible: { if is_platoon() then "true" else "false" }
 		render style: image
 		image: { platoon_icon() }
 
