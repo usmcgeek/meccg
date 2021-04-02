@@ -153,15 +153,16 @@ card style:
 		image: { platoon_icon() }
 
 	back points:
-		left: 260
-		top: 670
+		left: 256
+		top: { if is_modsmall() then 682 else 672 }
 		width: 240
 		height: 240
 		z index: 1
 		visible: { if is_small() then "true" else "false" }
 		alignment: middle center shrink-overflow
 		font:
-			name: Myriad Pro
+			#name: Myriad Pro
+			name: Aldo the Apache
 			color: black
 			size: 90
 			weight: bold

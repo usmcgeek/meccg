@@ -17,6 +17,7 @@ include file: language
 	is_2ammo := { contains(card.background, match: "2 Ammo") }
 	is_3ammo := { contains(card.background, match: "3") }
 	is_helo := { contains (card.background, match: "Helo") }
+	is_modsmall := { contains(card.background, match: "Cards Mod") }
 
 ###########################################################Nation Icons Selection
 nation_icon := {

@@ -129,6 +129,12 @@ symbol:
 symbol:
 	code: german
 	image: german.png
+symbol:
+	code: nato
+	image: nato.png
+symbol:
+	code: warsaw
+	image: warsaw.png
 	
 ##############################################################
 # Insert-symbol menu
@@ -161,6 +167,8 @@ insert symbol menu:
 	item: LOADER
 	item: radio
 	item: RADIO
+	item: nato
+	item: warsaw
 	item: america
 	item: ambrit
 	item: AMERICA
