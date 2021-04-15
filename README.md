@@ -1,6 +1,7 @@
 # Middle Earth CCG Set Editor Custom
 
-* Custom Fork of Magic Set Editor to support high resolution export and creation
+* Custom Fork of Magic Set Editor to support high resolution export at 300dpi and creation of custom cards.
+* Added initial Template for SWCCG
 * Added Support for TANKS TableTop Skirmish Game
 * Check the [Wiki](https://github.com/usmcgeek/meccg/wiki/MECCG-Set-Editor:-Getting-Started) for guides and tips!
 * Looking for the cards? The remastered repo is [here](https://github.com/usmcgeek/mer)
@@ -24,6 +25,10 @@
  * Promo Icon field added
  * Easily add a Card set icon (like the DC team does)
 
+## 14 Apr 2021
+ * Added initial Decipher Star Wars CCG Templates
+ * Basic Functions on limited number of cards operational
+ 
 ## 23 Mar 2021
  * Added Game Templates and Support for TANKS miniatures game cards
  * Current template support for Classic and Modern Vehicle Cards - No Crew or Damage/Critical cards yet - still WIP

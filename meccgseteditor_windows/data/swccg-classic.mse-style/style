@@ -1,0 +1,362 @@
+mse version: 0.3.8
+game: swccg
+full name: Star Wars CCG Classic
+short name: Classic
+icon: icon.png
+position hint: 001
+
+version: 2021-03-22
+
+###########################################################################
+### Dependencies
+###########################################################################
+
+depends on:
+	package: swccg.mse-game
+	version: 2021-03-21
+
+depends on:
+	package: swccg-icons.mse-symbol-font
+	version: 2021-03-21
+
+#By: Jason Smith
+
+###########################################################################
+### Card Image Resolution Information
+###########################################################################
+
+card width: 750
+card height: 1050
+card dpi: 300
+
+###########################################################################
+### Fonts Used in this Style
+###########################################################################
+
+#  Myriad Pro Cond
+
+
+###########################################################################
+### Card Background Image Menu Selections
+###########################################################################
+
+card style:
+
+############################# Border Color
+	border color:
+		left: 0
+		top : 0
+		width:	750
+		height:	1050
+		radius: 30
+		left width:   70
+		right width:  70
+		top width:    70
+		bottom width: 70
+		z index: -2
+
+##############################################################################
+
+	background:
+		left: 0
+		top: 0
+		width: 750
+		height: 1050
+		z index: -1
+		render style: image
+		popup style: in place
+		choice images:
+			Dark Side Character Alien: ds_alien.png
+			Dark Side Character Imperial: ds_character.png
+			Dark Side Character Dark Jedi: ds_darkjedi.png
+			Dark Side Character Droid: ds_droid.png
+			Dark Side Equipment Device: ds_device.png
+			Dark Side Equipment Weapon: ds_weapon.png
+			Dark Side Vehicles Starship: ds_starship.png
+			Dark Side Effect: ds_effect.png
+			Dark Side Interrupt: ds_interrupt.png
+			Dark Side Objective: ds_objective.png
+			Light Side Character Alien: ls_alien.png
+			Light Side Character Imperial: ls_character.png
+			Light Side Character Jedi: ls_jedi.png
+			Light Side Character Droid: ls_droid.png
+			Light Side Equipment Device: ls_device.png
+			Light Side Equipment Weapon: ls_weapon.png
+#			Light Side Vehicles Starship: ls_starship.png
+			Light Side Effect: ls_effect.png
+			Light Side Interrupt: ls_interrupt.png
+#			Light Side Objective: ls_objective.png
+
+###########################################################################
+### Normal Card Title / Name
+###########################################################################
+
+	name:
+		left: 150
+		top: 58
+		width: 432
+		height: 52
+		z index: 1
+		alignment: middle left shrink-overflow
+		font:
+			name: Fiorello CG Condensed
+			color: { if is_darkside() then "white" else "black" }
+			size: 30
+			scale down to: 6
+		symbol font:
+			name: swccg-icons
+			size: 30
+			scale down to: 6
+
+	destiny:
+		left: 623
+		top: 60
+		width: 54
+		height: 60
+		z index: 1
+		visible: true
+		alignment: middle center shrink-overflow
+		font:
+			name: Myriad Pro Cond
+			color: white
+			size: 34
+			weight: bold
+			scale down to: 6
+
+
+###########################################################################
+### Normal Card Flavor Text Box
+###########################################################################
+
+	flavor text:
+		left: 100
+		top: 156
+		width: 543
+		height: 94
+		alignment: left shrink-overflow
+		z index: 2
+		font:
+			name: Helvetica LT Std Cond Light
+			color: { if is_darkside() then "white" else "black" }
+			size: 18
+			scale down to: 10
+		line height soft: 0.9
+		line height hard max: 1.3
+		line height line max: 1.6
+		mask: text_mask_flavor.png
+
+
+###########################################################################
+### Normal Card Image Box
+###########################################################################
+	picture:
+		left: 81
+		top: 296
+		width: { if is_vehicle() then 588 else 586 }
+		height: { if is_vehicle() then 374 else 408 }
+		mask: image_mask_1.png
+
+
+###########################################################################
+### Normal Card Copyright Box
+###########################################################################
+
+	copyright:
+		left: 674
+		top: 692
+		width: 400
+		height: 30
+		z index: 1
+		angle: 90
+		alignment: center middle shrink-overflow
+		font:
+			name: Arial
+			color: { if is_darkside() then "white" else "black" }
+#			weight: bold
+			size: 12
+			scale down to: 6
+
+###########################################################################
+### Card Subtype Box - Effect/Interrupt/Starship/Weapon/Etc
+###########################################################################
+
+	subtype:
+		left: { if is_character() then 1000 else if is_vehicle() then 93 else 78 }
+		top: { if is_vehicle() then 691 else 720 }
+		width: { if is_vehicle() then 567 else 590 }
+		height: 50
+		z index: 1
+		visible: { if is_droid() or is_character() then "false" else "true" }
+		alignment: center middle shrink-overflow
+		font:
+			name: Helvetica LT Std Cond Bold
+			color: { if is_darkside() then "white" else "black" }
+			size: 20
+			scale down to: 6
+
+
+###########################################################################
+### Power - Ability - Armor/Force Boxes
+###########################################################################
+
+	power:
+		left: { if is_vehicle() then 98 else 110 }
+		top: { if is_vehicle() then 768 else if is_lightside() then 725 else 729 }
+		width: 136
+		height: 39
+		z index: 1
+		visible: { if is_character() or is_vehicle() then "true" else "false" }
+		alignment: center middle shrink-overflow
+		font:
+			name: Helvetica LT Std Cond Bold
+			color: { if is_darkside() then "white" else "black" }
+			size: 20
+			scale down to: 6
+
+	ability:
+		left: { if is_vehicle() then 260 else if is_droid() then 275 else 268 }
+		top: { if is_vehicle() then 768 else if is_lightside() then 725 else 729 }
+		width: { if is_vehicle() then 170 else if is_droid() then 362 else 134 }
+		height: 39
+		z index: 1
+		visible: { if is_character() or is_vehicle() then "true" else "false" }
+		alignment: { if is_droid() then "left middle shrink-overflow" else "center middle shrink-overflow" }
+		font:
+			name: Helvetica LT Std Cond Bold
+			color: { if is_darkside() then "white" else "black" }
+			size: 20
+			scale down to: 6
+
+	armor:
+		left: { if is_droid() then 1000 else if is_vehicle() then 460 else 440 }
+		top: { if is_vehicle() then 768 else if is_lightside() then 725 else 729 }
+		width: 190
+		height: 39
+		z index: 1
+		visible: { if is_droid() then "false" else if is_character() or is_vehicle() then "true" else "false" }
+		alignment: left middle shrink-overflow
+		font:
+			name: Helvetica LT Std Cond Bold
+			color: { if is_darkside() then "white" else "black" }
+			size: 20
+			scale down to: 6
+
+###########################################################################
+### Normal Card Rules Text Box
+###########################################################################
+
+	rules text:
+		left: { if is_character() or is_vehicle() then 117 else 91 }
+		top: { if is_vehicle() then 835 else 804 }
+		width: { if is_character() then 507 else if is_vehicle() then 517 else 560 }
+		height: { if is_vehicle() then 147 else 176 }
+		alignment: left shrink-overflow
+		z index: 2
+		padding left: 8
+		padding right: 0
+		padding bottom: 6
+		padding top: 2
+		font:
+			name: Myriad Pro
+			color: { if is_darkside() then "white" else "black" }
+			size: 17
+			scale down to: 8
+		symbol font:
+			name: swccg-icons
+			size: 17
+			scale down to: 8
+
+###########################################################################
+### Scomp Link Field
+###########################################################################
+
+	scomp:
+		left: 51
+		top: 826
+		width: 50
+		height: 50
+		z index: 1
+		visible: { if is_vehicle() then "true" else "false" }
+		alignment: center middle
+		symbol font:
+			name: swccg-icons
+			size: 370
+
+
+###########################################################################
+### Deploy and Forfeit
+###########################################################################
+
+	deploy:
+		left: 63
+		top: 892
+		width: 24
+		height: 40
+		z index: 1
+		visible: { if is_character() or is_vehicle() then "true" else "false" }
+		alignment: center middle
+		font:
+			name: Fiorello CG Condensed
+			color: black
+			size: 28
+#			scale down to: 6
+
+	forfeit:
+		left: 63
+		top: 946
+		width: 24
+		height: 40
+		z index: 1
+		visible: { if is_character() or is_vehicle() then "true" else "false" }
+		alignment: center middle
+		font:
+			name: Fiorello CG Condensed
+			color: white
+			size: 28
+#			scale down to: 6
+
+###########################################################################
+### Skills
+###########################################################################
+
+	skill1:
+		left: { if is_vehicle() then 648 else 642 }
+		top: { if is_vehicle() then 828 else 805 }
+		width: 50
+		height: 50
+		z index: 1
+		visible: { if is_character() or is_vehicle() then "true" else "false" }
+		alignment: center middle
+		symbol font:
+			name: swccg-icons
+			size: 370
+
+	skill2:
+		left: { if is_vehicle() then 648 else 642 }
+		top: { if is_vehicle() then 883 else 860 }
+		width: 50
+		height: 50
+		z index: 1
+		visible: { if is_character() or is_vehicle() then "true" else "false" }
+		alignment: center middle
+		symbol font:
+			name: swccg-icons
+			size: 370
+
+	skill3:
+		left: { if is_vehicle() then 648 else 642 }
+		top: { if is_vehicle() then 940 else 918 }
+		width: 50
+		height: 50
+		z index: 1
+		visible: { if is_character() or is_vehicle() then "true" else "false" }
+		alignment: center middle
+		symbol font:
+			name: swccg-icons
+			size: 370
+
+###########################################################################
+###########################################################################
+### Extra Card Fields and Styles
+###########################################################################
+###########################################################################

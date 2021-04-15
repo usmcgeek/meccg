@@ -1,0 +1,51 @@
+mse version: 0.3.8
+version: 2021-03-21
+short name: icons
+position hint: 2
+
+image font size: 300
+horizontal space: 0
+vertical space: 3
+symbol:
+	code: ds_unique
+	image: ds_unique.png
+
+symbol:
+	code: ls_unique
+	image: ls_unique.png
+
+symbol:
+	code: dspilot
+	image: skill_ds_pilot.png
+
+symbol:
+	code: indstarship
+	image: skill_ind_starship.png
+
+symbol:
+	code: navskill
+	image: skill_nav.png
+
+symbol:
+	code: soldier
+	image: skill_soldier.png
+
+symbol:
+	code: weapon
+	image: skill_weapon.png
+
+symbol:
+	code: scomp
+	image: scomp_link.png
+
+##############################################################
+# Insert-symbol menu
+insert symbol menu:
+	item: ds_unique
+	item: ls_unique
+	item: scomp
+	item: dspilot
+	item: indstarship
+	item: navskill
+	item: soldier
+	item: weapon

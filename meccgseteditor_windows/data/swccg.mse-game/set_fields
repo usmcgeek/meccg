@@ -1,0 +1,100 @@
+################################################################## Set fields
+set field:
+	type: info
+	name: Set information
+set field:
+	type: text
+	name: name
+	identifying: true
+	description: Set full display name
+set field:
+	type: text
+	name: author
+	description: Set author
+set field:
+	type: text
+	name: notes
+	multi line: true
+	description: Additional notes
+#################################################################### Next Section
+
+set field:
+	type: info
+	name: Copyright Line information
+set field:
+	type: text
+	name: copyright
+	multi line: true
+	description: Default copyright line (type (C) to insert a copyright symbol)
+
+##################################### Border color
+set field:
+	type: info
+	name: Choose the card border color
+set field:
+	type: color
+	name: border color
+	description: The default border color for cards
+	allow custom: true
+	choice:
+		name: Black - Limited
+		color: rgb(13,11,14)
+	choice:
+		name: Blue - Unlimited
+		color: rgb(0,71,124)
+	choice:
+		name: Silver - Challenge Deck
+		color: rgb(128,128,128)
+	choice:
+		name: Gold
+		color: rgb(200,180,0)
+	choice:
+		name: Green
+		color: rgb(15,121,52)
+	choice:
+		name: Dark Red
+		color: rgb(153,0,0)
+	choice:
+		name: Light Blue
+		color: rgb(0,204,204)
+	choice:
+		name: Purple
+		color: rgb(127,0,255)
+	choice:
+		name: Orange
+		color: rgb(255,128,0)
+
+##################################################################### Auto Options
+
+set field:
+	type: info
+	name: Spell Checking and Auto-Replace
+set field:
+	type: boolean
+	name: mark errors
+	description: Perform Spell Check on cards.
+
+set field:
+	type: info
+	name: Choose Language for Spell Checking
+set field:
+	type: choice
+	name: card language
+	description: Language for the cards
+	choice: English
+	choice: Français
+	choice: Deutsch
+	choice: Spanish
+	initial: English
+
+
+#######################################################################
+
+default set style:
+	card language:
+		render style: both
+		choice images:
+			English:  /swccg.mse-game/icons/language-en.png
+			Français: /swccg.mse-game/icons/language-fr.png
+			Deutsch:  /swccg.mse-game/icons/language-de.png
+			Spanish:  /swccg.mse-game/icons/language-es.png

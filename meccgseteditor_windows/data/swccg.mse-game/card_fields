@@ -1,0 +1,193 @@
+##################################################################
+### Card Fields Go Here (Common Card Fields for all sets)
+##################################################################
+
+################################################
+### Testing Border Color options
+card field:
+	type: color
+	name: border color
+	default: set.border_color
+	show statistics: false
+	description: The border of the card; can be any solid color.
+
+##################################################################
+### Card Background Drop Down Menu Choices
+##################################################################
+card field:
+	type: choice
+	name: background
+	card list name: Type
+	choice:
+		name: Dark Side
+		choice:
+			name: Character
+			choice: Alien
+			choice: Imperial
+			choice: Dark Jedi
+			choice: Droid
+		choice:
+			name: Equipment
+			choice: Device
+			choice: Weapon
+		choice:
+			name: Vehicles
+			choice: Starship
+		choice: Effect
+		choice: Interrupt
+		choice: Objective
+	choice:
+		name: Light Side
+		choice:
+			name: Character
+			choice: Alien
+			choice: Imperial
+			choice: Jedi
+			choice: Droid
+		choice:
+			name: Equipment
+			choice: Device
+			choice: Weapon
+		choice:
+			name: Vehicles
+			choice: Starship
+		choice: Effect
+		choice: Interrupt
+
+
+	description: Type
+	card list visible: true
+
+###########################################################################
+### Card Fields
+###########################################################################
+
+card field:
+	type: text
+	name: name
+	identifying: true
+	show statistics: false
+	card list visible: true
+	description: Name
+
+card field:
+	type: text
+	name: destiny
+	identifying: false
+	show statistics: false
+	card list visible: true
+	description: Destiny Value
+
+
+card field:
+	type: image
+	name: picture
+	show statistics: false
+	description: Art; double click to choose
+
+
+
+################################################Rules and Flavor Text - Normal Cards
+
+card field:
+	type: text
+	name: rules text
+	show statistics: false
+	default: "Rules Text"
+	script: text_filter(value)
+	multi line: true
+	description: Rules text
+
+
+card field:
+	type: text
+	name: flavor text
+	show statistics: false
+	default: "Flavor Text"
+	script: flavor_text_filter(value)
+	multi line: true
+	description: Flavor text
+
+
+card field:
+	type: text
+	name: copyright
+	description: Copyright
+	script: if set.copyright != "" then set.copyright else ""
+	multi line: true
+
+card field:
+	type: text
+	name: power
+	show statistics: true
+	default: "POWER X"
+	multi line: false
+	description: Power value
+
+card field:
+	type: text
+	name: ability
+	show statistics: true
+	default: ability_default_text()
+	multi line: false
+	description: Ability value
+
+card field:
+	type: text
+	name: armor
+	show statistics: true
+	default: armor_default_text()
+	multi line: false
+	description: Armor or Force Sensitivity
+
+card field:
+	type: text
+	name: deploy
+	show statistics: true
+	default: "0"
+	multi line: false
+	description: Deploy Cost
+
+card field:
+	type: text
+	name: forfeit
+	show statistics: true
+	default: "0"
+	multi line: false
+	description: Forfeit Cost
+
+card field:
+	type: text
+	name: skill1
+	show statistics: false
+	multi line: false
+	description: Skill - Use Symbols
+
+card field:
+	type: text
+	name: skill2
+	show statistics: false
+	multi line: false
+	description: Skill - Use Symbols
+
+card field:
+	type: text
+	name: skill3
+	show statistics: false
+	multi line: false
+	description: Skill - Use Symbols
+
+card field:
+	type: text
+	name: scomp
+	show statistics: false
+	multi line: false
+	description: Scomp Link - Use Symbols
+
+card field:
+	type: text
+	name: subtype
+	show statistics: true
+	default: subtype_default_text()
+	multi line: false
+	description: Card Subtype Field

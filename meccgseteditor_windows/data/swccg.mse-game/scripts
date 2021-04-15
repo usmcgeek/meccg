@@ -1,0 +1,98 @@
+############################################################## Localization
+
+include file: language
+
+#############################################################Default matching
+	numbers_only := filter_rule(match: "[*+0-9-]")
+	#symbols_only := filter_rule(match: "[?dDsSbBfFHKRwc]")
+	#sites_only := filter_text(match: "[DSBFHKR]", input: value)
+
+######################Classic vs Modern Identification
+
+	is_interrupt := { contains(card.background, match: "Interrupt") }
+	is_effect := { contains(card.background, match: "Effect") }
+	is_device := { contains(card.background, match: "Device") }
+	is_weapon := { contains(card.background, match: "Weapon") }
+	is_starship := { contains(card.background, match: "Starship") }
+	is_vehicle := { contains(card.background, match: "Vehicle") }
+	is_droid := { contains(card.background, match: "Droid") }
+	is_character := { contains(card.background, match: "Character") }
+	is_objective := { contains(card.background, match: "Objective") }
+	is_darkside := { contains(card.background, match: "Dark") }
+	is_lightside := { contains(card.background, match: "Light") }
+
+
+#########Assign Subtype Default Values
+subtype_default_text := {
+	if is_interrupt() then "USED INTERRUPT"
+	else if is_effect() then "EFFECT"
+	else if is_device() then "DEVICE"
+	else if is_weapon() then "WEAPON"
+	else if is_starship() then "STARSHIP"
+	else "XXXX"
+}
+
+ability_default_text := {
+	if is_droid() then "TYPE OF DROID"
+	else if is_vehicle() then "MANEUVER X"
+	else if is_character() then "ABILITY X"
+	else "XXXX"
+}
+
+armor_default_text := {
+	if is_starship() then "HYPERSPEED X"
+	else if is_character() then "ARMOR X"
+	else "XXXX"
+}
+
+#######################################################################Spell Checking Filters
+text_filter :=
+	#Replace double dash to long dash
+	replace@(
+		match: "--"
+		replace: "—"
+	) +
+
+#################################################
+	# Spellcheck
+	{ if set.mark_errors then
+		check_spelling(
+			language: language().spellcheck_code,
+		)
+	  else input
+	} +
+	curly_quotes
+
+
+#################################################################
+#### Flavor Text Filter and Checks
+#################################################################
+flavor_text_filter :=
+	#Replace double dash to long dash
+	replace@(
+		match: "--"
+		replace: { "<b>" + "—" }
+	) +
+	# Spellcheck
+	{ if set.mark_errors then
+		check_spelling(
+			language: language().spellcheck_code,
+		)
+	  else input
+	} +
+	curly_quotes
+
+########################################################################
+#### Color Lists
+########################################################################
+white := { rgb(255,255,255) }
+black := { rgb(0,0,0) }
+silver := {rgb(128,128,128)}
+gold := {rgb(200,180,0)}
+blue := {rgb(0,71,124)}
+green := {rgb(15,121,52)}
+darkred := {rgb(153,0,0)}
+darkgreen := {rgb(76,153,0)}
+lightblue := {rgb(0,204,204)}
+purple := {rgb(127,0,255)}
+orange := {rgb(255,128,0)}
