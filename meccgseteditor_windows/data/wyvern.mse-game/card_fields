@@ -1,0 +1,144 @@
+﻿############################# Fields
+card field:
+	type: text
+	name: cardnumber
+	card list visible: true
+	card list column: 1
+	card list width: 10
+	card list name: Num
+	identifying: true
+	show statistics: false
+	description: Card set number
+	
+	
+card field:
+	type: text
+	name: name
+	card list visible: true
+	card list column: 2
+	card list width: 100
+	identifying: true
+	show statistics: false
+	#multi line: true
+	description: Name of the card
+	card list name:Card Name
+	script: to_upper(value)
+
+
+############################# Images
+card field:
+	type: image
+	name: cardart
+	show statistics: false
+	description: Art for the card
+	card list name: Card Art
+	
+card field:
+	type: choice
+	name: textframe
+	choice: general
+	initial: general
+	show statistics: false
+	editable: false
+	card list allow: false
+	
+card field:
+	type: text
+	name: gold
+	show statistics: false
+	card list name: Gold
+	card list visible: true
+	card list column: 4
+	card list width: 10
+	editable: false
+	script: length(card.goldbox)
+
+
+############################# Text box
+card field:
+	type: text
+	name: gametext
+	show statistics: false
+	multi line: true
+	description: Game text for the card
+	card list name: Game Text
+	#script: to_upper(value)
+	
+card field:
+	type: text
+	name: goldbox
+	show statistics: false
+	description: Gold cost (use any value A-z, 0-9, or |)
+	card list allow: false
+	script: format_gold_text(value)
+	
+	
+#card field:
+#	type: text
+#	name: flavor
+#	show statistics: false
+#	multi line: true
+#	description: Flavor text for the card
+#	card list name: Flavor Text
+#	script: "<i>" + value + "</i>"
+
+
+############################# Card Type	
+card field:
+	type: choice
+	name: cardtype
+	position hint: 100
+	choice: ACTION
+	choice: BATTLE ACTION
+	choice: BATTLE REACTION
+	choice: DRAGON SLAYER ACTION
+	choice: DRAGON
+	#choice: EQUIPMENT
+	#choice: HERO
+	choice: HIDDEN ACTION
+	choice: INTERCEPT ACTION
+	#choice: MONSTER
+	choice: REACTION
+	#choice: SPELL
+	choice: TERRAIN
+	choice: TREASURE
+	initial: DRAGON
+	card list name: Card Type
+	card list visible: true
+	card list column: 3
+	card list width: 50
+	description: Card type
+	
+	
+card field:
+	type: text
+	name: copyright
+	show statistics: false
+	multi line: false
+	description: Copyright
+	card list name: Copyright
+	script: to_upper("© " + set.setcopyright)
+	editable: false
+	
+card field:
+	type: choice
+	name: rarity
+	choice: common
+	choice: uncommon
+	choice: rare
+	#choice: mythic rare
+	#choice: special
+	#choice: masterpiece
+	initial: common
+	card list visible: true
+	card list column: 7
+	description: The rarity of the card, to edit the symbol switch to the 'set info' tab
+	show statistics: false
+	icon: stats/rarity.png
+	position hint: 100
+	choice colors:
+		common:     rgb(33,33,33)
+		uncommon:   rgb(224,224,224)
+		#mythic rare: rgb(202, 49, 35)
+		rare:       rgb(255,207,52)
+		#special:    rgb(190,0,255)

@@ -26,6 +26,9 @@ card field:
 			choice: Imperial
 			choice: Dark Jedi
 			choice: Droid
+			choice: First Order
+			choice: Republic
+			choice: Sith
 		choice:
 			name: Equipment
 			choice: Device
@@ -33,6 +36,7 @@ card field:
 		choice:
 			name: Vehicles
 			choice: Starship
+			choice: Vehicle
 		choice: Effect
 		choice: Interrupt
 		choice: Objective
@@ -51,6 +55,7 @@ card field:
 		choice:
 			name: Vehicles
 			choice: Starship
+			choice: Vehicle
 		choice: Effect
 		choice: Interrupt
 

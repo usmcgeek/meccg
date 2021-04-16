@@ -1,0 +1,282 @@
+﻿mse version: 0.3.8
+game: Wyvern
+short name: Card
+full name: Wyvern Card
+icon: sample.jpg
+installer group: wyvern/card
+position hint: 001
+
+version: 2020-06-02
+depends on:
+	package: wyvern.mse-game
+	version: 2020-06-02
+
+card width: 500
+card height: 700
+card dpi: 200
+
+
+############################################################## Styling fields
+#styling field:
+#	type: choice
+#	name: has game text
+#	description: Does the card have any game text?
+#	choice: yes
+#	choice: no
+#	initial: yes
+#styling field:
+#	type: choice
+#	name: has flavor text
+#	description: Does the card have any flavor text?
+#	choice: yes
+#	choice: no
+#	initial: no
+
+set info style:
+	symbol:
+		variation:
+			name: common
+			border radius: 0.10
+			fill type: linear gradient
+			fill color 1:   rgb(33,33,33)
+			fill color 2:   rgb(0, 0, 0)
+			border color 1: rgb(255,255,255)
+			border color 2: rgb(255,255,255)
+		variation:
+			name: uncommon
+			border radius: 0.10
+			fill type: linear gradient
+			fill color 1:   rgb(224,224,224)
+			fill color 2:   rgb(84, 84, 84)
+			border color 1: rgb(255,255,255)
+			border color 2: rgb(255,255,255)
+		variation:
+			name: rare
+			border radius: 0.10
+			fill type: linear gradient
+			fill color 1:   rgb(214,196,94)
+			fill color 2:   rgb(95, 84, 40)
+			border color 1: rgb(255,255,255)
+			border color 2: rgb(255,255,255)
+
+############################################################## Card fields
+card style:
+	cardnumber:
+		left: 401
+		top: 653
+		width: 70
+		height: 25
+		alignment: top right
+		padding bottom: 0
+		padding right: 1
+		z index: 3
+		font:
+			name: Cambria Bold
+			#italic name: Spellfire-Italic
+			size: 12
+			color: white
+		
+	
+	name:
+		left: 228
+		top: 21
+		width: 240
+		height: 27
+		alignment: right top
+		font:
+			name: Cambria Bold
+			#italic name: Spellfire-Italic
+			size: 17
+			color:
+				script:
+					if card.cardtype == "TREASURE" then rgb(45, 85, 110)
+					else rgb(200, 145, 90)
+		z index: 3
+		
+
+
+	copyright:
+		left: 33
+		top: 653
+		width: 220
+		height: 20
+		alignment: left middle
+		font:
+			name: Cambria
+			size: 10
+			color: white
+		z index: 5
+	
+	############################# Images
+	cardart:
+		left: 48
+		top: 49
+		width: 405
+		height:	404
+		z index: 0
+		default: default.jpg
+	
+	textframe:
+		left: 0
+		top: 0
+		width: 500
+		height:	700
+		z index: -1
+		choice images:
+			general: 
+				script:
+					if card.cardtype == "DRAGON" then "dragon.jpg"
+					else if card.cardtype == "EQUIPMENT" then "equipment.jpg"
+					else if card.cardtype == "TREASURE" then "treasure.jpg"
+					else if card.cardtype == "TERRAIN" then "terrain.jpg"
+					else if card.cardtype == "HERO" then "hero.jpg"
+					else if card.cardtype == "MONSTER" then "monster.jpg"
+					else if card.cardtype == "SPELL" then "spell.jpg"
+					else "action.jpg"
+		render style: image
+	
+	cardtype:
+		left: 32
+		top: 21
+		width: 250
+		height:	27
+		z index: 1
+		render style: text
+		alignment: left top
+		font:
+			name: Cambria Bold
+			size: 17
+			color: 
+				script:
+					if card.cardtype == "TREASURE" then rgb(45, 85, 110)
+					else rgb(200, 145, 90)
+					
+	#gold:
+	#	left: 44
+	#	top: 457
+	#	width: 403
+	#	height: 36
+	#	z index: 1
+	#	choice images:
+	#		0: gold0.png
+	#		1: gold1.png
+	#		2: gold2.png
+	#		3: gold3.png
+	#		4: gold4.png
+	#		5: gold5.png
+	#		6: gold6.png
+	#		7: gold7.png
+	#		8: gold8.png
+	#		9: gold9.png
+	#		10: gold10.png
+	#		11: gold11.png
+	#	render style: image
+	
+	goldbox:
+		left: 44
+		top: 457
+		width: 360
+		height: 36
+		symbol font:
+			name: wyvern-goldpiece.mse-symbol-font
+			size: 36
+			alignment: middle left
+		always symbol: true
+	
+	############################# Text box
+	gametext:
+		left: 49
+		top: 498
+		width: 404
+		height: 150
+			#script: 
+			#	if styling.has_game_text == "yes" and styling.has_flavor_text == "yes" then 75
+			#	else if styling.has_game_text == "yes" then 150
+			#	else 0
+		font:
+			name: Cambria
+			#italic name: Spellfire-Italic
+			size: 17
+			scale down to: 10
+			color: black
+		symbol font:
+			name: wyvern-goldpiece.mse-symbol-font
+			size: 18
+			alignment: middle left
+		always symbol: true
+		alignment: middle center
+			#script: 
+			#	if styling.has_game_text == "yes" and styling.has_flavor_text == "yes" then "bottom center"
+			#	else if styling.has_flavor_text == "yes" then "middle center"
+			#	else "middle center"
+		z index: 3
+		padding left:   6
+		padding right:  6
+		padding bottom: 1
+		line height hard: 1.0
+		line height line: 1.5
+		line height soft: 0.9
+		line height hard max: 1.0
+		line height line max: 1.6
+	#	visible: 
+	#		script: 
+	#			if styling.has_game_text == "yes" then true
+	#			else false
+				
+	#flavor:
+	#	left: 49
+	#	top: 
+	#		script:
+	#			if styling.has_game_text == "yes" and styling.has_flavor_text == "yes" then 573
+	#			else if styling.has_flavor_text == "yes" then 498
+	#			else 0
+	#	width: 404
+	#	height: 
+	#		script: 
+	#			if styling.has_game_text == "yes" and styling.has_flavor_text == "yes" then 75
+	#			else if styling.has_flavor_text == "yes" then 150
+	#			else 0
+	#	font:
+	#		name: Cambria
+	#		size: 17
+	#		scale down to: 10
+	#		color: black
+	#	alignment: 
+	#		script: 
+	#			if styling.has_game_text == "yes" and styling.has_flavor_text == "yes" then "top center"
+	#			else if styling.has_flavor_text == "yes" then "middle center"
+	#			else "middle center"
+	#	z index: 3
+	#	padding left:   6
+	#	padding right:  6
+	#	padding bottom: 1
+	#	line height hard: 1.0
+	#	line height line: 1.5
+	#	line height soft: 0.9
+	#	line height hard max: 1.0
+	#	line height line max: 1.6
+	#	visible: 
+	#		script: 
+	#			if styling.has_flavor_text == "yes" then true
+	#			else false
+		
+	rarity:
+		left: 421
+		top : 457
+		width: 34
+		height: 34
+		z index: 5
+		alignment: middle right
+		render style: image
+		choice images:
+			# Images based on the set symbol
+			common: 
+				script: 
+					symbol_variation(symbol: set.symbol, variation: "common")
+			uncommon:
+				script: 
+					symbol_variation(symbol: set.symbol, variation: "uncommon")
+			rare:
+				script:
+					symbol_variation(symbol: set.symbol, variation: "rare")
+	

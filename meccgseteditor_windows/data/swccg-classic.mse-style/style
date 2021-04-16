@@ -70,9 +70,13 @@ card style:
 			Dark Side Character Imperial: ds_character.png
 			Dark Side Character Dark Jedi: ds_darkjedi.png
 			Dark Side Character Droid: ds_droid.png
+			Dark Side Character First Order: ds_firstorder.png
+			Dark Side Character Republic: ds_republic.png
+			Dark Side Character Sith: ds_sith.png
 			Dark Side Equipment Device: ds_device.png
 			Dark Side Equipment Weapon: ds_weapon.png
 			Dark Side Vehicles Starship: ds_starship.png
+			Dark Side Vehicles Vehicle: ds_vehicle.png
 			Dark Side Effect: ds_effect.png
 			Dark Side Interrupt: ds_interrupt.png
 			Dark Side Objective: ds_objective.png
@@ -82,10 +86,11 @@ card style:
 			Light Side Character Droid: ls_droid.png
 			Light Side Equipment Device: ls_device.png
 			Light Side Equipment Weapon: ls_weapon.png
-#			Light Side Vehicles Starship: ls_starship.png
+			Light Side Vehicles Starship: ls_starship.png
+			Light Side Vehicles Vehicle: ls_vehicle.png
 			Light Side Effect: ls_effect.png
 			Light Side Interrupt: ls_interrupt.png
-#			Light Side Objective: ls_objective.png
+			Light Side Objective: ls_objective.png
 
 ###########################################################################
 ### Normal Card Title / Name

@@ -1,0 +1,24 @@
+﻿mse version: 2.0.0
+short name: Gold Piece
+full name: Wyvern Gold Piece
+icon: gold.png
+installer group: wyvern/font/goldpiece
+position hint: 001
+
+version: 2020-06-04
+
+
+image font size: 36
+horizontal space: 0
+#
+##Nonmana symbols
+symbol:
+	code: |
+	image: gold.png
+	image font size: 36
+
+
+##############################################################
+# Insert-symbol menu
+insert symbol menu:
+	item: |

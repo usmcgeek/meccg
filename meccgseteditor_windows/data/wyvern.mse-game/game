@@ -1,0 +1,34 @@
+﻿mse version: 0.3.8
+short name: Wyvern
+full name: Wyvern
+installer group: wyvern/game files
+icon: logo.jpg
+position hint: 01
+
+version: 2020-06-02
+
+
+############################################################## The script
+
+init script: include file: script
+
+############################################################## Lots of lists
+
+################## There be dragons here. -Liosan ##########################
+
+include file: card_fields
+
+
+
+############################################################## Other stuff
+set field:
+	type: text
+	name: setcopyright
+	show statistics: false
+	description: Copyright
+	card list name: Copyright
+	
+set field:
+	type: symbol
+	name: symbol
+	description: The symbol for this set, double click to edit
