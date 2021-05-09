@@ -1,7 +1,7 @@
 mse version: 0.3.8
 game: meccg
-full name: Challenge Deck
-short name: B - Challenge
+full name: Challenge Deck Sideboard
+short name: B - Challenge Side
 icon: icon.png
 position hint: 001
 
@@ -893,7 +893,7 @@ extra card style:
 		visible: { not is_region() }
 		render style: image
 		choice images:
-			default: challengedeckicon.png
+			default: challengedeckicon_side.png
 
 extra card field:
 	type: text
@@ -915,5 +915,5 @@ extra card style:
 		visible: { not is_region() }
 		font:
 			name: MECCGBold
-			color: black
+			color: white
 			size: 18
