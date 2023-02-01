@@ -268,7 +268,7 @@ card style:
 			scale down to: 8
 		symbol font:
 			name: swccg-icons
-			size: 17
+			size: 150
 			scale down to: 8
 
 ###########################################################################
